@@ -1,6 +1,7 @@
 const pokemon = {
   venusaur: {
     id: 3,
+    species: "venusaur",
     type: { type1: "grass", type2: "poison" },
     stats: {
       hp: 80,
@@ -13,6 +14,7 @@ const pokemon = {
   },
   ratticate: {
     id: 20,
+    species: "ratticate",
     type: { type1: "normal", type2: null },
     stats: {
       hp: 55,
@@ -31,6 +33,7 @@ const pokemon = {
   },
   tauros: {
     id: 128,
+    species: "tauros",
     type: { type1: "normal", type2: null },
     stats: {
       hp: 75,

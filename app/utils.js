@@ -15,4 +15,13 @@ const anyKeyPrompt = async (message) => {
   process.exit;
 };
 
-module.exports = { anyKeyPrompt };
+const pascaleCase = async (string) => {
+  return string
+    .split("")
+    .map((letter, index) =>
+      index === 0 ? letter.toUpperCase() : letter.toLowerCase()
+    )
+    .join("");
+};
+
+module.exports = { anyKeyPrompt, pascaleCase };
