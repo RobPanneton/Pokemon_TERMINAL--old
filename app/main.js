@@ -1,9 +1,12 @@
-const readline = require("readline").createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const prompt = require("prompt-sync")();
 
-readline.question("Who are you? ", (name) => {
-  console.log(`Hey there ${name}!`);
-  readline.close();
-});
+const { introScreen } = require("./intro");
+const { pokemon } = require("./stats/pokemon");
+
+let response = "number 0";
+
+// console.log("Pokemon TERMINAL");
+
+introScreen();
+
+// response = prompt("Pokemon TERMINAL");

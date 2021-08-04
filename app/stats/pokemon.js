@@ -13,7 +13,7 @@ const pokemon = {
   },
   ratticate: {
     id: 20,
-    type: { type1: "normal", type2: None },
+    type: { type1: "normal", type2: null },
     stats: {
       hp: 55,
       attack: 81,
@@ -31,7 +31,7 @@ const pokemon = {
   },
   tauros: {
     id: 128,
-    type: { type1: "normal", type2: None },
+    type: { type1: "normal", type2: null },
     stats: {
       hp: 75,
       attack: 100,
