@@ -12,7 +12,7 @@ const attackPrompt = (attacks) => {
     attackPrompt(attacks);
   }
 
-  return response;
+  return attacks[response - 1];
 };
 
 module.exports = { attackPrompt };

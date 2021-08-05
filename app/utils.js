@@ -24,4 +24,8 @@ const pascaleCase = async (string) => {
     .join("");
 };
 
-module.exports = { anyKeyPrompt, pascaleCase };
+const timeDelay = async (delay) => {
+  return await new Promise((resolve) => setTimeout(resolve, delay));
+};
+
+module.exports = { anyKeyPrompt, pascaleCase, timeDelay };

@@ -56,7 +56,9 @@ const battle = async () => {
 
   await timeDelay(500);
 
-  await attackPrompt(user1.team[0].attacks);
+  let selectedMove = await attackPrompt(user1.team[0].attacks);
+
+  console.log(selectedMove);
 
   return;
 };
