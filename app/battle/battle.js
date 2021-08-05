@@ -1,6 +1,7 @@
 const attacks = require("../stats/attacks");
 
 const { attackPrompt } = require("./attackPrompt");
+const { timeDelay } = require("../utils");
 
 const battle = async () => {
   const user1 = {
@@ -42,8 +43,18 @@ const battle = async () => {
     ],
   };
 
+  await timeDelay(250);
+
+  await console.log(`${user1.name} sent out ${user1.team[0].species}!\n`);
+
+  await timeDelay(1000);
+
+  console.log(`${user2.name} sent out ${user2.team[0].species}!\n`);
+
   //   console.log(attacks.attacks.stomp);
   //   console.log(user1.team[0].attacks);
+
+  await timeDelay(500);
 
   await attackPrompt(user1.team[0].attacks);
 
