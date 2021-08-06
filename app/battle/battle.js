@@ -2,63 +2,68 @@ const attacks = require("../stats/attacks");
 
 const { attackPrompt } = require("./attackPrompt");
 const { timeDelay } = require("../utils");
+const { intiateTurn, initiateTurn } = require("./initiateTurn");
 
 const battle = async () => {
-  const user1 = {
+  let user1 = {
     name: "user",
     team: [
       {
-        species: "tauros",
-        hp: 75,
-        maxHp: 75,
-        type: { type1: "normal", type2: null },
+        species: "TAUROS",
+        level: 100,
+        hp: 353,
+        maxHp: 353,
+        type: { type1: "NORMAL", type2: null },
         stats: {
-          hp: 75,
-          attack: 100,
-          defense: 95,
-          special: 70,
-          speed: 110,
+          hp: 353,
+          attack: 298,
+          defense: 288,
+          special: 238,
+          speed: 318,
         },
         attacks: [attacks.attacks.stomp],
       },
     ],
   };
 
-  const user2 = {
+  let user2 = {
     name: "npc",
     team: [
       {
         id: 20,
-        species: "ratticate",
+        species: "RATTICATE",
+        level: 100,
+        hp: 313,
+        maxHp: 313,
         type: { type1: "normal", type2: null },
         stats: {
-          hp: 55,
-          attack: 81,
-          defense: 60,
-          special: 50,
-          speed: 97,
+          hp: 313,
+          attack: 260,
+          defense: 218,
+          special: 198,
+          speed: 292,
         },
         attacks: [attacks.attacks.tackle],
       },
     ],
   };
 
-  await timeDelay(250);
+  // await timeDelay(250);
 
   await console.log(`${user1.name} sent out ${user1.team[0].species}!\n`);
 
-  await timeDelay(1000);
+  // await timeDelay(1000);
 
   console.log(`${user2.name} sent out ${user2.team[0].species}!\n`);
 
-  //   console.log(attacks.attacks.stomp);
-  //   console.log(user1.team[0].attacks);
-
-  await timeDelay(500);
+  // await timeDelay(500);
 
   let selectedMove = await attackPrompt(user1.team[0].attacks);
 
-  console.log(selectedMove);
+  let turnResult = await initiateTurn(
+    { pokemon1: user1.team[0], attack1: selectedMove },
+    { pokemon2: user2.team[0], attack2: attacks.attacks.tackle }
+  );
 
   return;
 };
