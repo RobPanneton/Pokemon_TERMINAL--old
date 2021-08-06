@@ -14,14 +14,6 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   // first attack
   console.log(`${pokemon1.species} used ${attack1.name}!`);
 
-  //   let damage = Math.ceil(
-  //     (((2 * pokemon1.level) / 5 + 2) *
-  //       attack1.attack *
-  //       (pokemon1.stats.attack / pokemon2.stats.defense)) /
-  //       50 +
-  //       2
-  //   );
-
   let damage =
     (((2 * pokemon1.level) / 5 + 2) *
       attack1.attack *
