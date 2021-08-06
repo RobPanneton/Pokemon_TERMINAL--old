@@ -1,18 +1,12 @@
 const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
-  console.log(attack1);
-  console.log(attack2);
-  console.log(pokemon1);
-  console.log(pokemon2);
-
   // insert priority check
   // insert speed check
 
   let pokemon1Copy = pokemon1;
   let pokemon2Copy = pokemon2;
-  console.log(pokemon2Copy);
 
   // first attack
-  console.log(`${pokemon1.species} used ${attack1.name}!`);
+  console.log(`\n${pokemon1.species} used ${attack1.name}!`);
 
   let damage =
     (((2 * pokemon1.level) / 5 + 2) *
@@ -21,27 +15,53 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
       50 +
     2;
 
-  // stab
+  // stab check and rounding
   damage =
     pokemon1.type.type1 === attack1.type
       ? Math.floor((damage *= 1.5))
       : Math.floor(damage);
 
-  console.log(pokemon1.type.type1);
+  pokemon2.hp - damage < 0
+    ? (pokemon2.hp = 0)
+    : (pokemon2.hp = pokemon2.hp -= damage);
 
-  pokemon2Copy.hp -= damage;
+  // set small delay --> put hp bar lowering when ready
 
-  //   console.log(pokemon1.level);
-  //   console.log(attack1.attack);
-  //   console.log(pokemon1.attack);
-  //   console.log(pokemon2.defense);
+  console.log(`${pokemon2.species} has ${pokemon2.hp}/${pokemon2.maxHp}HP.\n`);
 
-  console.log(pokemon2Copy);
-  console.log(damage);
+  if (pokemon2Copy.hp === 0) console.log(`${pokemon2.species} has fainted!\n`);
 
   // second attack
 
-  return;
+  if (pokemon2.hp > 0) {
+    console.log(`\n${pokemon2.species} used ${attack2.name}!`);
+
+    let damage2 =
+      (((2 * pokemon2.level) / 5 + 2) *
+        attack2.attack *
+        (pokemon2.stats.attack / pokemon1.stats.defense)) /
+        50 +
+      2;
+
+    // stab check and rounding
+    damage2 =
+      pokemon2.type.type1 === attack2.type
+        ? Math.floor((damage2 *= 1.5))
+        : Math.floor(damage2);
+
+    pokemon1.hp - damage2 < 0
+      ? (pokemon1.hp = 0)
+      : (pokemon1.hp = pokemon1.hp -= damage2);
+
+    if (pokemon1Copy.hp === 0)
+      console.log(`${pokemon1.species} has fainted!\n`);
+
+    console.log(
+      `${pokemon1.species} has ${pokemon1.hp}/${pokemon1.maxHp}HP.\n`
+    );
+  }
+
+  return [pokemon1Copy, pokemon2Copy];
 };
 
 module.exports = { initiateTurn };

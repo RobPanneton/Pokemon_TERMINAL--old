@@ -35,7 +35,7 @@ const battle = async () => {
         level: 100,
         hp: 313,
         maxHp: 313,
-        type: { type1: "normal", type2: null },
+        type: { type1: "NORMAL", type2: null },
         stats: {
           hp: 313,
           attack: 260,
@@ -58,12 +58,24 @@ const battle = async () => {
 
   // await timeDelay(500);
 
-  let selectedMove = await attackPrompt(user1.team[0].attacks);
+  isWinner = false;
 
-  let turnResult = await initiateTurn(
-    { pokemon1: user1.team[0], attack1: selectedMove },
-    { pokemon2: user2.team[0], attack2: attacks.attacks.tackle }
-  );
+  while (!isWinner) {
+    let selectedMove = await attackPrompt(user1.team[0].attacks);
+
+    let turnResult = await initiateTurn(
+      { pokemon1: user1.team[0], attack1: selectedMove },
+      { pokemon2: user2.team[0], attack2: attacks.attacks.tackle }
+    );
+
+    user1.team[0] = turnResult[0];
+    user2.team[0] = turnResult[1];
+
+    // temporary winchecker
+    if (user1.team[0].hp === 0 || user2.team[0].hp === 0) isWinner = true;
+  }
+
+  console.log("User1 Wins!");
 
   return;
 };
