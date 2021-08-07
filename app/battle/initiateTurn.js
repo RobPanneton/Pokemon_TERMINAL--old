@@ -8,6 +8,13 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   // first attack
   console.log(`\n${pokemon1.species} used ${attack1.name}!`);
 
+  // figure out the logic behind attacks and attack types
+  // if power > 0 , calc damage and reduce enemy hp
+  // if power = 0 , read effect and apply it to enemy poke's stats/statuses
+  // you'll need to set active pokemon and party pokemon keys for several things
+  // in party : status
+  // in battle : seeded, binded (+by what), flinched
+
   let damage =
     (((2 * pokemon1.level) / 5 + 2) *
       attack1.attack *
@@ -29,7 +36,7 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
 
   console.log(`${pokemon2.species} has ${pokemon2.hp}/${pokemon2.maxHp}HP.\n`);
 
-  if (pokemon2Copy.hp === 0) console.log(`${pokemon2.species} has fainted!\n`);
+  if (pokemon2Copy.hp === 0) console.log(`${pokemon2.species} fainted!\n`);
 
   // second attack
 
@@ -53,8 +60,7 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
       ? (pokemon1.hp = 0)
       : (pokemon1.hp = pokemon1.hp -= damage2);
 
-    if (pokemon1Copy.hp === 0)
-      console.log(`${pokemon1.species} has fainted!\n`);
+    if (pokemon1Copy.hp === 0) console.log(`${pokemon1.species} fainted!\n`);
 
     console.log(
       `${pokemon1.species} has ${pokemon1.hp}/${pokemon1.maxHp}HP.\n`

@@ -1,8 +1,8 @@
 const pokemon = {
   venusaur: {
     id: 3,
-    species: "venusaur",
-    type: { type1: "grass", type2: "poison" },
+    species: "VENUSAUR",
+    type: { type1: "GRASS", type2: "POISON" },
     stats: {
       hp: 263,
       attack: 262,
@@ -10,12 +10,12 @@ const pokemon = {
       special: 298,
       speed: 258,
     },
-    attacks: ["tackle", "growl", "leech seed", "vine whip"],
+    attacks: ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"],
   },
   ratticate: {
     id: 20,
-    species: "ratticate",
-    type: { type1: "normal", type2: null },
+    species: "RATICATE",
+    type: { type1: "NORMAL", type2: null },
     stats: {
       hp: 313,
       attack: 260,
@@ -24,16 +24,16 @@ const pokemon = {
       speed: 292,
     },
     attacks: [
-      "tackle",
-      "tail whip",
-      "quick attack",
-      "hyper fang",
-      "super fang",
+      "TACKLE",
+      "TAIL WHIP",
+      "QUICK ATTACK",
+      "HYPER FANG",
+      "SUPER FANG",
     ],
   },
   tauros: {
     id: 128,
-    species: "tauros",
+    species: "TAUROS",
     type: { type1: "NORMAL", type2: null },
     stats: {
       hp: 353,
@@ -43,13 +43,13 @@ const pokemon = {
       speed: 318,
     },
     attacks: [
-      "tackle",
-      "tail whip",
-      "stomp",
-      "leer",
-      "rage",
-      "take down",
-      "strength",
+      "TACKLE",
+      "TAIL WHIP",
+      "STOMP",
+      "LEER",
+      "RAGE",
+      "TAKE DOWN",
+      "STRENGTH",
     ],
   },
 };

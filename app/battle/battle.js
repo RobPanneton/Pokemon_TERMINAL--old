@@ -48,6 +48,8 @@ const battle = async () => {
     ],
   };
 
+  // along with adding hp, you'll need to add the pp for all of the attacks and keep track of them throughout the battle
+
   // await timeDelay(250);
 
   await console.log(`${user1.name} sent out ${user1.team[0].species}!\n`);
