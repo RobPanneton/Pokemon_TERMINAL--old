@@ -35,12 +35,48 @@ const attackExample = {
       freeze: true,
       sleep: true,
     },
+    confused: true,
     flinch: true,
     seed: true,
     bind: true,
     heal: 50,
     ohko: true,
-    multpy: "rng",
+    multpy: "rng with parameters",
+    conversion: {
+      type: "NORMAL",
+    },
+    counter: true,
+    critBonus: true,
+    disable: true,
+    recoil: true,
+    setDamage: "pokemon.level",
+    sleepCondition: "forDreamEater",
+    digCondition: "forEarthquake",
+    selfKill: true,
+    statReset: "haze",
+    missDamage: "high jump kick",
+    // metronome
+    // mirror move
+    // mimic
+    // mist
+    // pay day ??
+    // frenzy + confusion === petal dance
+    // psybeam
+    // rage ( raise user's attack when hit)
+    // recover - soft-boiled
+    // rest
+    // reflect
+    // light screen
+    // roar: phazing
+    // skull bash
+    // set damage (dragon rage, sonicboom)
+    // ,,, focus energy?? glitched in gen 1 ? what to do..
+    // splash
+    // substitute
+    // super fang
+    // swift when accuracy changes are added
+    // teleport
+    // transform
   },
   // try to dynamically code dig, fly, sky attack, etc, charge up and recharge moves
 };
