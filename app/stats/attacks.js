@@ -61,13 +61,13 @@ const attackExample = {
     // mist
     // pay day ??
     // frenzy + confusion === petal dance
-    // psybeam
+    // psywave
     // rage ( raise user's attack when hit)
     // recover - soft-boiled
     // rest
     // reflect
     // light screen
-    // roar: phazing
+    // roar: phasing
     // skull bash
     // set damage (dragon rage, sonicboom)
     // ,,, focus energy?? glitched in gen 1 ? what to do..
