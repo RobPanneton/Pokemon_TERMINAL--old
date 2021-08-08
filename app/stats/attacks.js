@@ -1,13 +1,32 @@
 const attacks = {
-  tackle: {
+  TACKLE: {
     name: "TACKLE",
     attack: 35,
     accuracy: 100,
     type: "NORMAL",
   },
-  stomp: {
+  STOMP: {
     name: "STOMP",
     attack: 65,
+    accuracy: 100,
+    type: "NORMAL",
+  },
+
+  FLAMETHROWER: {
+    name: "FLAMETHROWER",
+    attack: 95,
+    accuracy: 100,
+    type: "FIRE",
+  },
+  SURF: {
+    name: "SURF",
+    attack: 95,
+    accuracy: 100,
+    type: "WATER",
+  },
+  STRENGTH: {
+    name: "STRENGTH",
+    attack: 80,
     accuracy: 100,
     type: "NORMAL",
   },

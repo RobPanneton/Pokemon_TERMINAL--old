@@ -1,5 +1,5 @@
 const pokemon = {
-  venusaur: {
+  VENUSAUR: {
     id: 3,
     species: "VENUSAUR",
     type: { type1: "GRASS", type2: "POISON" },
@@ -12,7 +12,53 @@ const pokemon = {
     },
     attacks: ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"],
   },
-  ratticate: {
+  CHARIZARD: {
+    id: 6,
+    species: "CHARIZARD",
+    type: { type1: "FIRE", type2: "FLYING" },
+    stats: {
+      hp: 359,
+      attack: 266,
+      defense: 254,
+      special: 268,
+      speed: 298,
+    },
+    attacks: [
+      "SCRATCH",
+      "GROWL",
+      "EMBER",
+      "LEER",
+      "RAGE",
+      "SLASH",
+      "FLAMETHROWER",
+      "FIRE SPIN",
+    ],
+  },
+  BLASTOISE: {
+    id: 9,
+    species: "BLASTOISE",
+    type: { type1: "WATER", type2: null },
+    stats: {
+      hp: 361,
+      attack: 264,
+      defense: 298,
+      special: 268,
+      speed: 254,
+    },
+    attacks: [
+      "TACKLE",
+      "TAIL WHIP",
+      "BUBBLE",
+      "WATER GUN",
+      "BITE",
+      "WITHDRAW",
+      "SKULL BASH",
+      "HYDRO PUMP",
+      "SURF",
+      "STRENGTH",
+    ],
+  },
+  RATICATE: {
     id: 20,
     species: "RATICATE",
     type: { type1: "NORMAL", type2: null },
@@ -31,7 +77,7 @@ const pokemon = {
       "SUPER FANG",
     ],
   },
-  tauros: {
+  TAUROS: {
     id: 128,
     species: "TAUROS",
     type: { type1: "NORMAL", type2: null },
