@@ -44,8 +44,6 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   damage *= multiplier1;
   // stab check and rounding
 
-  console.log(damage);
-
   pokemon2.hp - damage < 0
     ? (pokemon2.hp = 0)
     : (pokemon2.hp = pokemon2.hp -= damage);
