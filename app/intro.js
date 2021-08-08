@@ -41,6 +41,16 @@ const introScreen = async () => {
     "                             °.___.°                               "
   );
   console.log("");
+
+  console.log("       ______                   _        _              _ ");
+  console.log("     /__   __/           /|    / |      / | / /        / /");
+  console.log("       /  / / _ \\ / /_  / |   /  |  / //  |/ / / _   // /");
+  console.log("      /  / /  __//  __// /|  / / | / // /|  / / /_/ // /____");
+  console.log(
+    "     /  /  \\___//  /  /_/ |_/ /| |/ //_/ |_/ /___/|// _______/  "
+  );
+  console.log("");
+
   await setTimeout(() => {
     // anyKeyPrompt("press any key to continue");
   }, 2000);
