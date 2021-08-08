@@ -9,19 +9,20 @@ const battle = async () => {
     name: "user",
     team: [
       {
-        species: "TAUROS",
+        id: 9,
+        species: "BLASTOISE",
         level: 100,
-        hp: 353,
-        maxHp: 353,
-        type: { type1: "NORMAL", type2: null },
+        hp: 361,
+        maxHp: 361,
+        type: { type1: "WATER", type2: null },
         stats: {
-          hp: 353,
-          attack: 298,
-          defense: 288,
-          special: 238,
-          speed: 318,
+          hp: 361,
+          attack: 264,
+          defense: 298,
+          special: 268,
+          speed: 254,
         },
-        attacks: [attacks.attacks.stomp],
+        attacks: [attacks.attacks.SURF, attacks.attacks.STRENGTH],
       },
     ],
   };
@@ -30,20 +31,20 @@ const battle = async () => {
     name: "npc",
     team: [
       {
-        id: 20,
-        species: "RATTICATE",
+        id: 6,
+        species: "CHARIZARD",
         level: 100,
-        hp: 313,
-        maxHp: 313,
-        type: { type1: "NORMAL", type2: null },
+        hp: 359,
+        maxHp: 359,
+        type: { type1: "FIRE", type2: "FLYING" },
         stats: {
-          hp: 313,
-          attack: 260,
-          defense: 218,
-          special: 198,
-          speed: 292,
+          hp: 359,
+          attack: 266,
+          defense: 254,
+          special: 268,
+          speed: 298,
         },
-        attacks: [attacks.attacks.tackle],
+        attacks: [attacks.attacks.FLAMETHROWER],
       },
     ],
   };
@@ -67,7 +68,7 @@ const battle = async () => {
 
     let turnResult = await initiateTurn(
       { pokemon1: user1.team[0], attack1: selectedMove },
-      { pokemon2: user2.team[0], attack2: attacks.attacks.tackle }
+      { pokemon2: user2.team[0], attack2: user2.team[0].attacks[0] }
     );
 
     user1.team[0] = turnResult[0];

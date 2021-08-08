@@ -1,3 +1,5 @@
+const { typeCheck } = require("./typeChecker");
+
 const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   // insert priority check
   // insert speed check
@@ -15,18 +17,34 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   // in party : status
   // in battle : seeded, binded (+by what), flinched
 
-  let damage =
+  let damage = Math.floor(
     (((2 * pokemon1.level) / 5 + 2) *
       attack1.attack *
-      (pokemon1.stats.attack / pokemon2.stats.defense)) /
+      (pokemon1.stats.special / pokemon2.stats.special)) /
       50 +
-    2;
+      2
+  );
 
-  // stab check and rounding
+  // check for super effective / not very effective
+  const multiplier1 = typeCheck(attack1, {
+    type1: pokemon2.type.type1,
+    type2: pokemon2.type.type2,
+  });
+
+  if (multiplier1 > 1) console.log("It's super effective!");
+  if (multiplier1 < 1) console.log("It's not very effective.");
+  if (multiplier1 === 0)
+    console.log(`It doesn't affect Enemy ${pokemon2.species}!`);
+
   damage =
     pokemon1.type.type1 === attack1.type
       ? Math.floor((damage *= 1.5))
       : Math.floor(damage);
+
+  damage *= multiplier1;
+  // stab check and rounding
+
+  console.log(damage);
 
   pokemon2.hp - damage < 0
     ? (pokemon2.hp = 0)
@@ -43,12 +61,25 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   if (pokemon2.hp > 0) {
     console.log(`\n${pokemon2.species} used ${attack2.name}!`);
 
-    let damage2 =
+    let damage2 = Math.floor(
       (((2 * pokemon2.level) / 5 + 2) *
         attack2.attack *
-        (pokemon2.stats.attack / pokemon1.stats.defense)) /
+        (pokemon2.stats.special / pokemon1.stats.special)) /
         50 +
-      2;
+        2
+    );
+
+    const multiplier2 = typeCheck(attack2, {
+      type1: pokemon1.type.type1,
+      type2: pokemon1.type.type2,
+    });
+
+    if (multiplier2 > 1) console.log("It's super effective!");
+    if (multiplier2 < 1) console.log("It's not very effective.");
+    if (multiplier2 === 0)
+      console.log(`It doesn't affect Enemy ${pokemon1.species}!`);
+
+    damage2 *= multiplier2;
 
     // stab check and rounding
     damage2 =
