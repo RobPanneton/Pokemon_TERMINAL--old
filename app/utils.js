@@ -11,8 +11,10 @@ const keypress = async () => {
 const anyKeyPrompt = async (message) => {
   console.log(message);
   await keypress();
-  console.log("next");
+  console.log("keypressed");
   process.exit;
+
+  return;
 };
 
 const pascaleCase = async (string) => {

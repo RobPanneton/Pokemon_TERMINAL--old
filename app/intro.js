@@ -55,9 +55,9 @@ const introScreen = async () => {
   await setTimeout(() => {
     // anyKeyPrompt("press any key to continue");
   }, 2000);
-  anyKeyPrompt("press any key to continue");
-};
+  const toContinue = await anyKeyPrompt("press any key to continue");
 
-console.log(introScreen());
+  return;
+};
 
 module.exports = { introScreen };
