@@ -57,7 +57,7 @@ const introScreen = async () => {
   }, 2000);
   const toContinue = await anyKeyPrompt("press any key to continue");
 
-  return;
+  if (toContinue) return;
 };
 
 module.exports = { introScreen };

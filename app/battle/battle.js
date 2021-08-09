@@ -4,7 +4,7 @@ const { attackPrompt } = require("./attackPrompt");
 const { timeDelay } = require("../utils");
 const { intiateTurn, initiateTurn } = require("./initiateTurn");
 
-const battle = async () => {
+const initiateBattle = async () => {
   let user1 = {
     name: "user",
     team: [
@@ -53,7 +53,7 @@ const battle = async () => {
 
   // await timeDelay(250);
 
-  await console.log(`${user1.name} sent out ${user1.team[0].species}!\n`);
+  await console.log(`\n${user1.name} sent out ${user1.team[0].species}!\n`);
 
   // await timeDelay(1000);
 
@@ -83,10 +83,8 @@ const battle = async () => {
   return;
 };
 
-battle();
-
-module.exports = () => {
-  battle;
+module.exports = {
+  initiateBattle,
 };
 
 // script for clearing the terminal text, "scrolls down"
