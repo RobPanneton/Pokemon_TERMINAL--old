@@ -6,10 +6,9 @@ const { initiateBattle } = require("./battle/battle");
 const start = async () => {
   let isStarted = false;
   if (isStarted === false) {
-    await introScreen();
     isStarted = true;
   }
-
+  await introScreen();
   await initiateBattle();
 
   return;
