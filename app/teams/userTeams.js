@@ -3,7 +3,7 @@ const { attacks } = require("../stats/attacks");
 const userTeams = {
   team1: {
     id: 1,
-    trainerName: "USER TEAM",
+    trainerName: "USER",
     teamName: "TEAM 1",
     team: [
       {

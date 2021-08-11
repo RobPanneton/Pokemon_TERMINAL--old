@@ -4,19 +4,23 @@ const { attackPrompt } = require("./attackPrompt");
 const { timeDelay } = require("../utils");
 const { initiateTeam } = require("./initiateTeam");
 const { initiateTurn } = require("./initiateTurn");
+const { playerSwitch } = require("./playerSwitch");
+const { npcSwitch } = require("./npcSwitch");
+const { winChecker } = require("./winChecker");
 const { userTeams } = require("../teams/userTeams");
 const { npcTeams } = require("../teams/npcTeams");
 
 const initiateBattle = async () => {
-  // let user1 = {
-  //   name: "user",
+  // let userexample = {
+  //   trainerName: "user",
   //   team: [
   //     {
-  //       id: 9,
+  //       id: 0,
   //       species: "BLASTOISE",
   //       level: 100,
   //       hp: 361,
   //       maxHp: 361,
+  //       fainted: false,
   //       type: { type1: "WATER", type2: null },
   //       stats: {
   //         hp: 361,
@@ -30,28 +34,6 @@ const initiateBattle = async () => {
   //   ],
   // };
 
-  // let user2 = {
-  //   name: "npc",
-  //   team: [
-  //     {
-  //       id: 6,
-  //       species: "CHARIZARD",
-  //       level: 100,
-  //       hp: 359,
-  //       maxHp: 359,
-  //       type: { type1: "FIRE", type2: "FLYING" },
-  //       stats: {
-  //         hp: 359,
-  //         attack: 266,
-  //         defense: 254,
-  //         special: 268,
-  //         speed: 298,
-  //       },
-  //       attacks: [attacks.attacks.FLAMETHROWER],
-  //     },
-  //   ],
-  // };
-
   // along with adding hp,
   // you'll need to add the pp for all of the attacks and keep track of them throughout the battle
 
@@ -60,36 +42,75 @@ const initiateBattle = async () => {
   let player1 = await initiateTeam(userTeams.team1);
   let player2 = await initiateTeam(npcTeams.test1);
 
+  // send out pokemon, make temp copy.
+  // when switching or fainted, use id(index) to replace the version in player.team
+  player1.currentPokemon = player1.team[0];
+  player2.currentPokemon = player2.team[0];
+
   console.log(
-    `\n${player1.trainerName} sent out ${player1.team[0].species}!\n`
+    `\n${player1.trainerName} sent out ${player1.currentPokemon.species}!\n`
   );
 
   // await timeDelay(1000);
 
   console.log(
-    `\n${player2.trainerName} sent out ${player2.team[0].species}!\n`
+    `\n${player2.trainerName} sent out ${player2.currentPokemon.species}!\n`
   );
 
   // await timeDelay(500);
 
-  isWinner = false;
+  let winner = "";
+  let loser = "";
 
-  while (!isWinner) {
-    let selectedMove = await attackPrompt(player1.team[0].attacks);
+  while (!winner) {
+    let selectedMove = await attackPrompt(player1.currentPokemon.attacks);
 
     let turnResult = await initiateTurn(
-      { pokemon1: player1.team[0], attack1: selectedMove },
-      { pokemon2: player2.team[0], attack2: player2.team[0].attacks[0] }
+      { pokemon1: player1.currentPokemon, attack1: selectedMove },
+      {
+        pokemon2: player2.currentPokemon,
+        attack2: player2.currentPokemon.attacks[0],
+      }
     );
 
-    player1.team[0] = turnResult[0];
-    player2.team[0] = turnResult[1];
+    player1.currentPokemon = turnResult[0];
+    player2.currentPokemon = turnResult[1];
+
+    if (player2.currentPokemon.hp === 0) {
+      player2.currentPokemon.fainted = true;
+      player2.team[player2.currentPokemon.id] = player2.currentPokemon;
+
+      if (await winChecker(player2.team)) {
+        winner = player1.trainerName;
+        loser = player2.trainerName;
+      } else {
+        player2.currentPokemon = await npcSwitch(player2.team);
+        console.log(
+          `\n${player2.trainerName} sent out ${player2.currentPokemon.species}\n`
+        );
+      }
+    }
+
+    if (player1.currentPokemon.hp === 0) {
+      player1.currentPokemon.fainted = true;
+      player1.team[player1.currentPokemon.id] = player1.currentPokemon;
+
+      if (await winChecker(player1.team)) {
+        winner = player2.trainerName;
+        loser = player1.trainerName;
+      } else {
+        player1.currentPokemon = await playerSwitch(player1.team);
+        console.log(
+          `\n${player1.trainerName} sent out ${player1.currentPokemon.species}\n`
+        );
+      }
+    }
 
     // temporary winchecker
-    if (player1.team[0].hp === 0 || player2.team[0].hp === 0) isWinner = true;
+    // if (player1.team[0].hp === 0 || player2.team[0].hp === 0) winner = true;
   }
 
-  console.log("User1 Wins!");
+  console.log(`${winner} has won the battle!`);
 
   return;
 };
@@ -105,3 +126,4 @@ module.exports = {
 // console.log(blank);
 // readline.cursorTo(process.stdout, 0, 0);
 // readline.clearScreenDown(process.stdout);
+// slide that into a util function when nearing completion and add callbacks between events
