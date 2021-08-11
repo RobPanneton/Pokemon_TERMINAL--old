@@ -14,8 +14,6 @@ const start = async () => {
     if (playerResponse === 2) await teambuilderMainMenu();
     if (playerResponse === 9) return process.exit();
   }
-
-  return;
 };
 
 start();

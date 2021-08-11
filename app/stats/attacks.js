@@ -1,13 +1,13 @@
 const attacks = {
   TACKLE: {
     name: "TACKLE",
-    attack: 35,
+    power: 35,
     accuracy: 100,
     type: "NORMAL",
   },
   STOMP: {
     name: "STOMP",
-    attack: 65,
+    power: 65,
     accuracy: 100,
     type: "NORMAL",
     effect: {
@@ -18,7 +18,7 @@ const attacks = {
 
   FLAMETHROWER: {
     name: "FLAMETHROWER",
-    attack: 95,
+    power: 95,
     accuracy: 100,
     type: "FIRE",
     effect: {
@@ -28,15 +28,31 @@ const attacks = {
   },
   SURF: {
     name: "SURF",
-    attack: 95,
+    power: 95,
     accuracy: 100,
     type: "WATER",
   },
   STRENGTH: {
     name: "STRENGTH",
-    attack: 80,
+    power: 80,
     accuracy: 100,
     type: "NORMAL",
+  },
+  VINEWHIP: {
+    name: "VINE WHIP",
+    power: 35,
+    accuracy: 100,
+    type: "GRASS",
+  },
+  THUNDERBOLT: {
+    name: "THUNDERBOLT",
+    power: 95,
+    accuracy: 100,
+    type: "ELECTRIC",
+    effect: {
+      chance: 10,
+      effect: "PARALYZE",
+    },
   },
 };
 
