@@ -1,25 +1,25 @@
+const { attacks } = require("../stats/attacks");
+
 const npcTeams = {
   test1: {
     id: 1,
-    name: "test1",
+    trainerName: "NPC Trainer",
+    teamName: "Test Team 1",
     team: [
       {
-        slot: 1,
         species: "BLASTOISE",
         level: 100,
-        attacks: [attacks.attacks.SURF, attacks.attacks.STRENGTH],
+        attacks: [attacks.SURF, attacks.STRENGTH],
       },
       {
-        slot: 2,
         species: "CHARIZARD",
         level: 100,
-        attacks: [attacks.attacks.FLAMETHROWER],
+        attacks: [attacks.FLAMETHROWER],
       },
       {
-        slot: 3,
         species: "VENUSAUR",
         level: 100,
-        attacks: [attacks.attacks.VINEWHIP],
+        attacks: [attacks.VINEWHIP],
       },
     ],
   },

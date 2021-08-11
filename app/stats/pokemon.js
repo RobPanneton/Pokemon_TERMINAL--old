@@ -1,4 +1,4 @@
-const pokemon = {
+const POKEMON = {
   VENUSAUR: {
     id: 3,
     species: "VENUSAUR",
@@ -393,4 +393,4 @@ const pokemon = {
   },
 };
 
-module.exports = pokemon;
+module.exports = { POKEMON };

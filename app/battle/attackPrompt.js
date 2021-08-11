@@ -5,9 +5,11 @@ const attackPrompt = (attacks) => {
     return `${index + 1}) ${attack.name}           `;
   });
   console.log(`${attackList.join("")}                      9) SWITCH`);
-  response = prompt("What will you do?  ");
+  response = Number(prompt("What will you do?  "));
 
-  if (response < 1 || (response > 4 && response !== 9)) {
+  if (response === 8) process.exit();
+
+  if (response < 1 || (response > attackList.length && response !== 9)) {
     console.log("\nPlease enter a valid response. \n");
     attackPrompt(attacks);
   }

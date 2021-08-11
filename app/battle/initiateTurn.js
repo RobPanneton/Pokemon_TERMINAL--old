@@ -19,7 +19,7 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
 
   let damage = Math.floor(
     (((2 * pokemon1.level) / 5 + 2) *
-      attack1.attack *
+      attack1.power *
       (pokemon1.stats.special / pokemon2.stats.special)) /
       50 +
       2
@@ -61,7 +61,7 @@ const initiateTurn = ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
 
     let damage2 = Math.floor(
       (((2 * pokemon2.level) / 5 + 2) *
-        attack2.attack *
+        attack2.power *
         (pokemon2.stats.special / pokemon1.stats.special)) /
         50 +
         2

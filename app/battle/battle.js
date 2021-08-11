@@ -2,30 +2,33 @@ const attacks = require("../stats/attacks");
 
 const { attackPrompt } = require("./attackPrompt");
 const { timeDelay } = require("../utils");
-const { intiateTurn, initiateTurn } = require("./initiateTurn");
+const { initiateTeam } = require("./initiateTeam");
+const { initiateTurn } = require("./initiateTurn");
+const { userTeams } = require("../teams/userTeams");
+const { npcTeams } = require("../teams/npcTeams");
 
 const initiateBattle = async () => {
-  let user1 = {
-    name: "user",
-    team: [
-      {
-        id: 9,
-        species: "BLASTOISE",
-        level: 100,
-        hp: 361,
-        maxHp: 361,
-        type: { type1: "WATER", type2: null },
-        stats: {
-          hp: 361,
-          attack: 264,
-          defense: 298,
-          special: 268,
-          speed: 254,
-        },
-        attacks: [attacks.attacks.SURF, attacks.attacks.STRENGTH],
-      },
-    ],
-  };
+  // let user1 = {
+  //   name: "user",
+  //   team: [
+  //     {
+  //       id: 9,
+  //       species: "BLASTOISE",
+  //       level: 100,
+  //       hp: 361,
+  //       maxHp: 361,
+  //       type: { type1: "WATER", type2: null },
+  //       stats: {
+  //         hp: 361,
+  //         attack: 264,
+  //         defense: 298,
+  //         special: 268,
+  //         speed: 254,
+  //       },
+  //       attacks: [attacks.attacks.SURF, attacks.attacks.STRENGTH],
+  //     },
+  //   ],
+  // };
 
   let user2 = {
     name: "npc",
@@ -53,7 +56,14 @@ const initiateBattle = async () => {
 
   // await timeDelay(250);
 
-  await console.log(`\n${user1.name} sent out ${user1.team[0].species}!\n`);
+  let team1 = await initiateTeam(userTeams.team1);
+  let team2 = await initiateTeam(npcTeams.test1);
+
+  console.log(team2);
+
+  process.exit();
+
+  console.log(`\n${user1.name} sent out ${user1.team[0].species}!\n`);
 
   // await timeDelay(1000);
 
