@@ -12,6 +12,7 @@ const initiateTeam = async (selectedTeam) => {
       level: poke.level,
       hp: pokemonTemp.stats.hp,
       maxHp: pokemonTemp.stats.hp,
+      fainted: false,
       type: pokemonTemp.type,
       stats: pokemonTemp.stats,
       attacks: poke.attacks,

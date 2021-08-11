@@ -30,62 +30,63 @@ const initiateBattle = async () => {
   //   ],
   // };
 
-  let user2 = {
-    name: "npc",
-    team: [
-      {
-        id: 6,
-        species: "CHARIZARD",
-        level: 100,
-        hp: 359,
-        maxHp: 359,
-        type: { type1: "FIRE", type2: "FLYING" },
-        stats: {
-          hp: 359,
-          attack: 266,
-          defense: 254,
-          special: 268,
-          speed: 298,
-        },
-        attacks: [attacks.attacks.FLAMETHROWER],
-      },
-    ],
-  };
+  // let user2 = {
+  //   name: "npc",
+  //   team: [
+  //     {
+  //       id: 6,
+  //       species: "CHARIZARD",
+  //       level: 100,
+  //       hp: 359,
+  //       maxHp: 359,
+  //       type: { type1: "FIRE", type2: "FLYING" },
+  //       stats: {
+  //         hp: 359,
+  //         attack: 266,
+  //         defense: 254,
+  //         special: 268,
+  //         speed: 298,
+  //       },
+  //       attacks: [attacks.attacks.FLAMETHROWER],
+  //     },
+  //   ],
+  // };
 
-  // along with adding hp, you'll need to add the pp for all of the attacks and keep track of them throughout the battle
+  // along with adding hp,
+  // you'll need to add the pp for all of the attacks and keep track of them throughout the battle
 
   // await timeDelay(250);
 
-  let team1 = await initiateTeam(userTeams.team1);
-  let team2 = await initiateTeam(npcTeams.test1);
+  let player1 = await initiateTeam(userTeams.team1);
+  let player2 = await initiateTeam(npcTeams.test1);
 
-  console.log(team2);
-
-  process.exit();
-
-  console.log(`\n${user1.name} sent out ${user1.team[0].species}!\n`);
+  console.log(
+    `\n${player1.trainerName} sent out ${player1.team[0].species}!\n`
+  );
 
   // await timeDelay(1000);
 
-  console.log(`${user2.name} sent out ${user2.team[0].species}!\n`);
+  console.log(
+    `\n${player2.trainerName} sent out ${player2.team[0].species}!\n`
+  );
 
   // await timeDelay(500);
 
   isWinner = false;
 
   while (!isWinner) {
-    let selectedMove = await attackPrompt(user1.team[0].attacks);
+    let selectedMove = await attackPrompt(player1.team[0].attacks);
 
     let turnResult = await initiateTurn(
-      { pokemon1: user1.team[0], attack1: selectedMove },
-      { pokemon2: user2.team[0], attack2: user2.team[0].attacks[0] }
+      { pokemon1: player1.team[0], attack1: selectedMove },
+      { pokemon2: player2.team[0], attack2: player2.team[0].attacks[0] }
     );
 
-    user1.team[0] = turnResult[0];
-    user2.team[0] = turnResult[1];
+    player1.team[0] = turnResult[0];
+    player2.team[0] = turnResult[1];
 
     // temporary winchecker
-    if (user1.team[0].hp === 0 || user2.team[0].hp === 0) isWinner = true;
+    if (player1.team[0].hp === 0 || player2.team[0].hp === 0) isWinner = true;
   }
 
   console.log("User1 Wins!");
