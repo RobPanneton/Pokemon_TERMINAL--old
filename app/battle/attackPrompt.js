@@ -7,7 +7,7 @@ const attackPrompt = (attacks) => {
   console.log(`${attackList.join("")}                      9) SWITCH`);
   response = prompt("What will you do?  ");
 
-  if (response < 1 || response > 4) {
+  if (response < 1 || (response > 4 && response !== 9)) {
     console.log("\nPlease enter a valid response. \n");
     attackPrompt(attacks);
   }

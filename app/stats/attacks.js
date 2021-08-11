@@ -10,6 +10,10 @@ const attacks = {
     attack: 65,
     accuracy: 100,
     type: "NORMAL",
+    effect: {
+      chance: 33,
+      flinch: true,
+    },
   },
 
   FLAMETHROWER: {
@@ -17,6 +21,10 @@ const attacks = {
     attack: 95,
     accuracy: 100,
     type: "FIRE",
+    effect: {
+      chance: 10,
+      status: "BURN",
+    },
   },
   SURF: {
     name: "SURF",
@@ -64,16 +72,16 @@ const attackExample = {
     conversion: {
       type: "NORMAL",
     },
-    counter: true,
-    critBonus: true,
-    disable: true,
-    recoil: true,
-    setDamage: "pokemon.level",
-    sleepCondition: "forDreamEater",
-    digCondition: "forEarthquake",
-    selfKill: true,
-    statReset: "haze",
-    missDamage: "high jump kick",
+    // counter: true,
+    // critBonus: true,
+    // disable: true,
+    // recoil: true,
+    // setDamage: "pokemon.level",
+    // sleepCondition: "forDreamEater",
+    // digCondition: "forEarthquake",
+    // selfKill: true,
+    // statReset: "haze",
+    // missDamage: "high jump kick",
     // metronome
     // mirror move
     // mimic
