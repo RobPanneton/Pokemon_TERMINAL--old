@@ -5,6 +5,12 @@ const attacks = {
     accuracy: 100,
     type: "NORMAL",
   },
+  EARTHQUAKE: {
+    name: "EARTHQUAKE",
+    power: 100,
+    accuracy: 100,
+    type: "GROUND",
+  },
   STOMP: {
     name: "STOMP",
     power: 65,

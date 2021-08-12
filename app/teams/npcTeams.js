@@ -6,16 +6,17 @@ const npcTeams = {
     trainerName: "NPC Trainer",
     teamName: "Test Team 1",
     team: [
+      { species: "NIDOKING", level: 100, attacks: [attacks.EARTHQUAKE] },
       {
         species: "BLASTOISE",
         level: 100,
         attacks: [attacks.SURF, attacks.STRENGTH],
       },
-      {
-        species: "CHARIZARD",
-        level: 100,
-        attacks: [attacks.FLAMETHROWER],
-      },
+      // {
+      //   species: "CHARIZARD",
+      //   level: 100,
+      //   attacks: [attacks.FLAMETHROWER],
+      // },
       {
         species: "VENUSAUR",
         level: 100,

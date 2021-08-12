@@ -30,7 +30,4 @@ const userTeams = {
   },
 };
 
-console.log(attacks);
-// console.log(team1.team[0].attacks);
-
 module.exports = { userTeams };

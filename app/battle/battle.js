@@ -11,29 +11,6 @@ const { userTeams } = require("../teams/userTeams");
 const { npcTeams } = require("../teams/npcTeams");
 
 const initiateBattle = async () => {
-  // let userexample = {
-  //   trainerName: "user",
-  //   team: [
-  //     {
-  //       id: 0,
-  //       species: "BLASTOISE",
-  //       level: 100,
-  //       hp: 361,
-  //       maxHp: 361,
-  //       fainted: false,
-  //       type: { type1: "WATER", type2: null },
-  //       stats: {
-  //         hp: 361,
-  //         attack: 264,
-  //         defense: 298,
-  //         special: 268,
-  //         speed: 254,
-  //       },
-  //       attacks: [attacks.attacks.SURF, attacks.attacks.STRENGTH],
-  //     },
-  //   ],
-  // };
-
   // along with adding hp,
   // you'll need to add the pp for all of the attacks and keep track of them throughout the battle
 
@@ -119,6 +96,29 @@ module.exports = {
   initiateBattle,
 };
 
+// let userexample = {
+//   trainerName: "user",
+//   team: [
+//     {
+//       id: 0,
+//       species: "BLASTOISE",
+//       level: 100,
+//       hp: 361,
+//       maxHp: 361,
+//       fainted: false,
+//       type: { type1: "WATER", type2: null },
+//       stats: {
+//         hp: 361,
+//         attack: 264,
+//         defense: 298,
+//         special: 268,
+//         speed: 254,
+//       },
+//       attacks: [attacks.attacks.SURF, attacks.attacks.STRENGTH],
+//     },
+//   ],
+// };
+
 // script for clearing the terminal text, "scrolls down"
 // this way user can see previous text if wanted
 // const readline = require("readline");
@@ -127,3 +127,7 @@ module.exports = {
 // readline.cursorTo(process.stdout, 0, 0);
 // readline.clearScreenDown(process.stdout);
 // slide that into a util function when nearing completion and add callbacks between events
+
+// DAMAGE NOTES
+// NIDOKING USING EARTHQUAKE ON RAICHU DOES 1 HP MNORE  THAN MAX POSSIBLE DMG ROLL
+// WITH SAME DMG CALC, BLASTOISE'S SURF ON NIDOKING DOES PERFECT MAX DAMAGE
