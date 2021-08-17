@@ -3,8 +3,7 @@ const isThereSTAB = (pokemon, attack) => {
 
   if (pokemon.type.type1 === attack.type) result = true;
 
-  if (pokemon1.type.type2)
-    if (pokemon1.type.type2 === attack.type) result = true;
+  if (pokemon.type.type2) if (pokemon.type.type2 === attack.type) result = true;
 
   return result;
 };
