@@ -1,4 +1,6 @@
 const { typeMultiplierChecker } = require("./typeMultiplierChecker");
+const { typeMultiplierText } = require("./typeMultiplierText");
+const { isThereSTAB } = require("./isThereSTAB");
 
 const attackDamageCalculator = async (
   { pokemon1 },
@@ -19,10 +21,18 @@ const attackDamageCalculator = async (
         2
     );
 
-    damage *= typeMultiplierChecker(attack, {
+    if (await isThereSTAB(pokemon1, attack)) damage *= 1.5;
+
+    const typeMultiplier = await typeMultiplierChecker(attack, {
       type1: pokemon2.type.type1,
       type2: pokemon2.type.type2,
     });
+
+    await typeMultiplierText(typeMultiplier);
+
+    damage *= typeMultiplier;
+
+    return damage;
   }
 
   if (attackSplit === "PHYSICAL") {
