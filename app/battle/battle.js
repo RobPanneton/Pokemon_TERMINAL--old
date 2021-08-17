@@ -41,7 +41,11 @@ const initiateBattle = async () => {
 
   while (!winner) {
     let selectedMove = await attackPrompt(player1.currentPokemon.attacks);
+    // insert npc rng for move selection, and eventually, maybe a bot thatll dynamically select moves based on situation
+    // insert speed check here
 
+    // set logic so that you have a first and second mover, instead of p1 then p2
+    // you'll need the right logic to set the team stats according to the speed check winner
     let turnResult = await initiateTurn(
       { pokemon1: player1.currentPokemon, attack1: selectedMove },
       {
