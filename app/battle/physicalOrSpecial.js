@@ -3,7 +3,7 @@ const physicalOrSpecial = (type) => {
     return "PHYSICAL";
   if (/FIRE|WATER|GRASS|ELECTRIC|PSYCHIC|ICE|DRAGON/.test(type))
     return "SPECIAL";
-  return "error";
+  return console.log("error with phys or special");
 };
 
 module.exports = { physicalOrSpecial };

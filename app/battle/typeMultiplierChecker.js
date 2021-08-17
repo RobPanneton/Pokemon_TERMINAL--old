@@ -1,6 +1,6 @@
 const { types } = require("./typeInteractions");
 
-const typeCheck = (attack, { type1, type2 }) => {
+const typeMultiplierChecker = (attack, { type1, type2 }) => {
   let multiplier = 1;
 
   Object.keys(types[attack.type]).forEach((effect, index) => {
@@ -24,5 +24,5 @@ const typeCheck = (attack, { type1, type2 }) => {
 };
 
 module.exports = {
-  typeCheck,
+  typeMultiplierChecker,
 };

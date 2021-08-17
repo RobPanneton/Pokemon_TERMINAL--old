@@ -1,4 +1,4 @@
-const { typeCheck } = require("./typeChecker");
+const { typeMultiplierChecker } = require("./typeMultiplierChecker");
 const { physicalOrSpecial } = require("./physicalOrSpecial");
 
 const initiateTurn = async ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
@@ -22,7 +22,7 @@ const initiateTurn = async ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   );
 
   // check for super effective / not very effective
-  const multiplier1 = typeCheck(attack1, {
+  const multiplier1 = typeMultiplierChecker(attack1, {
     type1: pokemon2.type.type1,
     type2: pokemon2.type.type2,
   });
@@ -62,7 +62,7 @@ const initiateTurn = async ({ pokemon1, attack1 }, { pokemon2, attack2 }) => {
   if (pokemon2Copy.hp > 0) {
     console.log(`\n${pokemon2Copy.species} used ${attack2.name}!`);
 
-    const damageSplit1 = await hysicalOrSpecial(attack1.type);
+    const damageSplit2 = await physicalOrSpecial(attack1.type);
 
     let damage2 = Math.floor(
       (((2 * pokemon2.level) / 5 + 2) *
