@@ -9,9 +9,10 @@ const attackPrompt = (attacks) => {
 
   if (response === 8) process.exit();
 
-  if (response < 1 || (response > attackList.length && response !== 9)) {
+  while (response < 1 || (response > attackList.length && response !== 9)) {
     console.log("\nPlease enter a valid response. \n");
-    attackPrompt(attacks);
+    console.log(`${attackList.join("")}                      9) SWITCH`);
+    response = Number(prompt("What will you do?  "));
   }
 
   return attacks[response - 1];
