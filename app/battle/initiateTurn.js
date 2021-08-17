@@ -1,4 +1,3 @@
-const { typeMultiplierChecker } = require("./typeMultiplierChecker");
 const { physicalOrSpecial } = require("./physicalOrSpecial");
 const { attackDamageCalculator } = require("./attackDamageCalculator");
 

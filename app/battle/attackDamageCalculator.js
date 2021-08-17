@@ -13,7 +13,6 @@ const attackDamageCalculator = async (
   // calculation order
   // basic calc * rng * STAB * type * burn
   if (attackSplit === "SPECIAL") {
-    console.log({ pokemon1 });
     let damage = Math.floor(
       (((2 * pokemon1.level) / 5 + 2) *
         attack.power *
@@ -31,16 +30,12 @@ const attackDamageCalculator = async (
 
     await typeMultiplierText(typeMultiplier, pokemon2.species);
 
-    damage *= typeMultiplier;
-
-    console.log(damage);
+    damage = Math.floor(damage * typeMultiplier);
 
     return damage;
   }
 
   if (attackSplit === "PHYSICAL") {
-    console.log(pokemon1);
-    console.log(attack);
     let damage = Math.floor(
       (((2 * pokemon1.level) / 5 + 2) *
         attack.power *
@@ -58,9 +53,7 @@ const attackDamageCalculator = async (
 
     await typeMultiplierText(typeMultiplier, pokemon2.species);
 
-    damage *= typeMultiplier;
-
-    console.log(damage);
+    damage = Math.floor(damage * typeMultiplier);
 
     return damage;
   }
