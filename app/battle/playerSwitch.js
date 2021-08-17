@@ -14,9 +14,8 @@ const playerSwitch = async (team) => {
 
   let response = await Number(prompt("\nChoose a Pokemon: "));
 
-  if (response === 8) process.exit();
-
   while (!IDs.includes(response)) {
+    if (response === 8) process.exit();
     console.log("\nPlease enter a valid response.\n");
     stillAlive.forEach((poke) => {
       console.log(`${poke.id + 1}) ${poke.species}`);
