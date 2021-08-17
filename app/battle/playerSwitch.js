@@ -24,6 +24,7 @@ const playerSwitch = async (team) => {
     response = await Number(prompt("\nChoose a Pokemon: "));
   }
 
+  //add to comment
   return team[response - 1];
 };
 
