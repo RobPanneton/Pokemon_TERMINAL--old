@@ -1,8 +1,79 @@
 const attacks = {
+  ABSORB: {
+    name: "ABSORB",
+    power: 20,
+    accuracy: 100,
+    type: "GRASS",
+    effect: {
+      chance: 100,
+      drain: 50,
+      // if damage is 1, heals 1, does not heal from substitute dmg
+    },
+  },
+  ACID: {
+    name: "ACID",
+    power: 40,
+    accuracy: 100,
+    type: "POISON",
+    effect: {
+      chance: 85 / 256,
+      enemyStatChange: {
+        defense: -1,
+      },
+    },
+  },
+  ACIDARMOR: {
+    name: "ACID ARMOR",
+    power: 0,
+    accuracy: 100,
+    type: "POISON",
+    effect: {
+      chance: 100,
+      userStatChange: {
+        defense: 2,
+      },
+    },
+  },
+  AGILITY: {
+    name: "AGILITY",
+    power: 0,
+    accuracy: 100,
+    type: "PSYCHIC",
+    effect: {
+      chance: 100,
+      userStatChange: {
+        speed: 2,
+      },
+    },
+  },
+  AMNESIA: {
+    name: "AMNESIA",
+    power: 0,
+    accuracy: 100,
+    type: "PSYCHIC",
+    effect: {
+      chance: 100,
+      userStatChange: {
+        special: 2,
+      },
+    },
+  },
+  AURORABEAM: {
+    name: "AURORA BEAM",
+    power: 65,
+    accuracy: 100,
+    type: "ICE",
+    effect: {
+      chance: 85 / 256,
+      enemyStatChange: {
+        attack: -1,
+      },
+    },
+  },
   TACKLE: {
     name: "TACKLE",
     power: 35,
-    accuracy: 100,
+    accuracy: 95,
     type: "NORMAL",
   },
   EARTHQUAKE: {
