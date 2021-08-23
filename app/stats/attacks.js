@@ -3,6 +3,10 @@
 // TRAPPERS : BIND, CLAMP,
 // CONVERSION
 // COUNTER
+// DIG
+// DISABLE
+// DOUBLE TEAM (?)
+// DREAM EATER
 // body slam not paralyzing normal types?
 
 // HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
@@ -12,12 +16,17 @@
 // DRAIN: ABSORB,
 // STATMODS: ACID, AURORA BEAM
 // MULTI HIT: BARRAGE
+// RECOIL DAMAGE: DOUBLE-EDGE
+// FIXED DAMAGE: DRAGON RAGE
 
 // NOTEABLE POINTS:
 // MULTI HIT MOVES:
 // - CRITS: only checks for crits on 1st attack, subsequent hits are also crit if first lands
 // - BIDE/COUNTER: only registers last hit
 // - SUBSTITUTE: Stops multi-hit if sub breaks
+// RECOILING MOVES:
+// - SUBSITUTE: user does not take recoil damage if it destroys a sub
+// - COUNTER: sub recoil dmg is included in dmg calc if enemy did not move yet (?)
 
 const attacks = {
   ABSORB: {
@@ -277,6 +286,99 @@ const attacks = {
     power: 50,
     accuracy: 95,
     type: "NORMAL",
+  },
+  DEFENSECURL: {
+    name: "DEFENSE CURL",
+    power: 0,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      selfStatChange: {
+        defense: 1,
+      },
+    },
+  },
+  DIG: {
+    name: "DIG",
+    // TOOD
+  },
+  DISABLE: {
+    name: "DISABLE",
+    // TODO
+  },
+  DIZZYPUNCH: {
+    name: "DIZZY PUNCH",
+    power: 70,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 20,
+      volatileStatus: "confuse",
+    },
+  },
+  DOUBLEKICK: {
+    name: "DOUBLE KICK",
+    power: 30,
+    accuracy: 100,
+    type: "FIGHTING",
+    effect: {
+      chance: 100,
+      multihit: {
+        2: 100,
+      },
+    },
+  },
+  DOUBLESLAP: {
+    name: "DOUBLESLAP",
+    power: 15,
+    accuracy: 85,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      multihit: {
+        2: 37.5,
+        3: 75,
+        4: 87.5,
+        5: 100,
+      },
+    },
+  },
+  DOUBLETEAM: {
+    name: "DOUBLE TEAM",
+    // TO DO?? add or no?
+  },
+  DOUBLEEDGE: {
+    name: "DOUBLE-EDGE",
+    power: 100,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      recoil: 25,
+      // RECOIL DOES NOT TAKE EFFECT IF MOVE DESTROYS SUBSTITUTE,
+      // ALSO, DMG CAN BE USED FOR "COUNTER" ???
+    },
+  },
+  DRAGONRAGE: {
+    name: "DRAGON RAGE",
+    power: 0,
+    accuracy: 100,
+    type: "DRAGON",
+    effect: {
+      chance: 100,
+      damage: 40,
+    },
+  },
+  DREAMEATER: {
+    name: "DREAM EATER",
+    // TODO
+  },
+  DRILLPECK: {
+    name: "DRILL PECK",
+    power: 80,
+    accuracy: 100,
+    type: "FLYING",
   },
   TACKLE: {
     name: "TACKLE",
