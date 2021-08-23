@@ -1,7 +1,11 @@
 // TODOS :
 // BIDE
-// TRAPPERS : BIND,
+// TRAPPERS : BIND, CLAMP,
+// CONVERSION
+// COUNTER
 // body slam not paralyzing normal types?
+
+// HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
 
 // TO BE TESTED:
 // FLINCH : BITE,
@@ -12,7 +16,7 @@
 // NOTEABLE POINTS:
 // MULTI HIT MOVES:
 // - CRITS: only checks for crits on 1st attack, subsequent hits are also crit if first lands
-// - BIDE: only registers last move
+// - BIDE/COUNTER: only registers last hit
 // - SUBSTITUTE: Stops multi-hit if sub breaks
 
 const attacks = {
@@ -33,7 +37,7 @@ const attacks = {
     accuracy: 100,
     type: "POISON",
     effect: {
-      chance: 85 / 256,
+      chance: (85 / 256) * 100,
       enemyStatChange: {
         defense: -1,
       },
@@ -81,7 +85,7 @@ const attacks = {
     accuracy: 100,
     type: "ICE",
     effect: {
-      chance: 85 / 256,
+      chance: (85 / 256) * 100,
       enemyStatChange: {
         attack: -1,
       },
@@ -181,7 +185,7 @@ const attacks = {
     accuracy: 100,
     type: "WATER",
     effect: {
-      chance: 85 / 256,
+      chance: (85 / 256) * 100,
       enemyStatChange: {
         speed: -1,
       },
@@ -193,13 +197,87 @@ const attacks = {
     accuracy: 100,
     type: "WATER",
     effect: {
-      chance: 85 / 256,
+      chance: (85 / 256) * 100,
       enemyStatChange: {
         speed: -1,
       },
     },
   },
+  CLAMP: {
+    name: "CLAMP",
+    //TODO
+  },
+  COMETPUNCH: {
+    name: "COMET PUNCH",
+    power: 18,
+    accuracy: 85,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      multihit: {
+        2: 37.5,
+        3: 75,
+        4: 87.5,
+        5: 100,
+        // use rng and whatever is highest and <= is the result
+      },
+    },
+  },
+  CONFUSERAY: {
+    name: "CONFUSE RAY",
+    power: 0,
+    accuracy: 100,
+    type: "GHOST",
+    effect: {
+      chance: 100,
+      volatileStatus: "confusion",
+    },
+  },
+  CONFUSION: {
+    name: "CONFUSION",
+    power: 50,
+    accuracy: 100,
+    type: "PSYCHIC",
+    effect: {
+      chance: 10,
+      volatileStatus: "confusion",
+    },
+  },
+  CONSTRICT: {
+    name: "CONSTRICT",
+    power: 10,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: (85 / 256) * 100,
+      enemyStatChange: {
+        speed: -1,
+      },
+    },
+  },
+  CONVERSION: {
+    name: "CONVERSION",
+    //TODO
+  },
 
+  COUNTER: {
+    name: "COUNTER",
+    //TOOD
+  },
+  CRABHAMMER: {
+    name: "CRABHAMMER",
+    power: 90,
+    accuracy: 85,
+    effect: {
+      // high crit ratio
+    },
+  },
+  CUT: {
+    name: "CUT",
+    power: 50,
+    accuracy: 95,
+    type: "NORMAL",
+  },
   TACKLE: {
     name: "TACKLE",
     power: 35,
