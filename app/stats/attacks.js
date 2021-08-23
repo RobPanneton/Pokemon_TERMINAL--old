@@ -1,4 +1,4 @@
-// TODOS :
+// TODOS :                                    ~~~~~~~ MOVE CREATION TO DOS ~~~~~~~
 // BIDE
 // TRAPPERS : BIND, CLAMP,
 // CONVERSION
@@ -11,7 +11,8 @@
 
 // HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
 
-// TO BE TESTED:
+// TO BE TESTED:                              ~~~~~~~ TEST TO DOS ~~~~~~~
+
 // FLINCH : BITE,
 // DRAIN: ABSORB,
 // STATMODS: ACID, AURORA BEAM
@@ -19,7 +20,8 @@
 // RECOIL DAMAGE: DOUBLE-EDGE
 // FIXED DAMAGE: DRAGON RAGE
 
-// NOTEABLE POINTS:
+// NOTEABLE POINTS:                      ~~~~~~~ EXCEPTION TO DOS ~~~~~~~
+
 // MULTI HIT MOVES:
 // - CRITS: only checks for crits on 1st attack, subsequent hits are also crit if first lands
 // - BIDE/COUNTER: only registers last hit
