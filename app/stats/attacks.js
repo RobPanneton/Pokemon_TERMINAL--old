@@ -1,3 +1,20 @@
+// TODOS :
+// BIDE
+// TRAPPERS : BIND,
+// body slam not paralyzing normal types?
+
+// TO BE TESTED:
+// FLINCH : BITE,
+// DRAIN: ABSORB,
+// STATMODS: ACID, AURORA BEAM
+// MULTI HIT: BARRAGE
+
+// NOTEABLE POINTS:
+// MULTI HIT MOVES:
+// - CRITS: only checks for crits on 1st attack, subsequent hits are also crit if first lands
+// - BIDE: only registers last move
+// - SUBSTITUTE: Stops multi-hit if sub breaks
+
 const attacks = {
   ABSORB: {
     name: "ABSORB",
@@ -29,7 +46,7 @@ const attacks = {
     type: "POISON",
     effect: {
       chance: 100,
-      userStatChange: {
+      selfStatChange: {
         defense: 2,
       },
     },
@@ -41,7 +58,7 @@ const attacks = {
     type: "PSYCHIC",
     effect: {
       chance: 100,
-      userStatChange: {
+      selfStatChange: {
         speed: 2,
       },
     },
@@ -53,7 +70,7 @@ const attacks = {
     type: "PSYCHIC",
     effect: {
       chance: 100,
-      userStatChange: {
+      selfStatChange: {
         special: 2,
       },
     },
@@ -70,6 +87,119 @@ const attacks = {
       },
     },
   },
+  BARRAGE: {
+    name: "BARRAGE",
+    power: 15,
+    accuracy: 85,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      multihit: {
+        2: 37.5,
+        3: 75,
+        4: 87.5,
+        5: 100,
+        // use rng and whatever is highest and <= is the result
+      },
+    },
+  },
+  BARRIER: {
+    name: "BARRIER",
+    power: 0,
+    accuracy: 100,
+    type: "PSYCHIC",
+    effect: {
+      chance: 100,
+      selfStatChange: {
+        defense: 2,
+      },
+    },
+  },
+  BIDE: {
+    name: "BIDE",
+    //TODO
+  },
+  BIND: {
+    name: "BIND",
+    //TOOD
+  },
+  BITE: {
+    name: "BITE",
+    power: 60,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 10,
+      volatileStatus: "flinch",
+    },
+  },
+  BLIZZARD: {
+    name: "BLIZZARD",
+    power: 120,
+    accuracy: 90,
+    type: "ICE",
+    effect: {
+      chance: 10,
+      status: "freeze",
+    },
+  },
+  BODYSLAM: {
+    name: "BODY SLAM",
+    power: 80,
+    accuracy: 100,
+    effect: {
+      chance: 30,
+      status: "paralyze",
+      // cannot paralyze normal types??
+    },
+  },
+  BONECLUB: {
+    name: "BONE CLUB",
+    power: 65,
+    accuracy: 85,
+    type: "GROUND",
+    effect: {
+      chance: 10,
+      volatileStatus: "flinch",
+    },
+  },
+  BONEMERANG: {
+    name: "BONEMERANG",
+    power: 50,
+    accuracy: 90,
+    type: "GROUND",
+    effect: {
+      chance: 100,
+      multihit: {
+        2: 100,
+      },
+    },
+  },
+  BUBBLE: {
+    name: "BUBBLE",
+    power: 20,
+    accuracy: 100,
+    type: "WATER",
+    effect: {
+      chance: 85 / 256,
+      enemyStatChange: {
+        speed: -1,
+      },
+    },
+  },
+  BUBBLEBEAM: {
+    name: "BUBBLEBEAM",
+    power: 65,
+    accuracy: 100,
+    type: "WATER",
+    effect: {
+      chance: 85 / 256,
+      enemyStatChange: {
+        speed: -1,
+      },
+    },
+  },
+
   TACKLE: {
     name: "TACKLE",
     power: 35,
