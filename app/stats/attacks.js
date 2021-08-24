@@ -12,6 +12,9 @@
 // ACCURACY MOVES? FLASH, SAND-ATTACK, MINIMIZE, DOUBLE TEAM
 // FLY
 // FOCUS ENERGY ??? bugged in gen 1.. do i even add it ?
+// HAZE
+// HI JUMP KICK
+// HYPER BEAM
 
 // HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
 
@@ -545,7 +548,84 @@ const attacks = {
     accuracy: 100,
     type: "FLYING",
   },
-
+  HARDEN: {
+    name: "HARDEN",
+    power: 0,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      selfStatChange: {
+        defense: 1,
+      },
+    },
+  },
+  HAZE: {
+    name: "HAZE",
+    // TO DO : reset all stat changes
+  },
+  HEADBUTT: {
+    name: "HEADBUTT",
+    power: 70,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 30,
+      volatileStatus: "flinch",
+    },
+  },
+  HIGHJUMPKICK: {
+    name: "HI JUMP KICK",
+    power: 85,
+    accuracy: 90,
+    type: "FIGHTING",
+    // TO DO
+  },
+  HORNATTACK: {
+    name: "HORN ATTACK",
+    power: 65,
+    accuracy: 100,
+    type: "NORMAL",
+  },
+  HORNDRILL: {
+    // TO DO
+  },
+  HYDROPUMP: {
+    name: "HYDRO PUMP",
+    power: 120,
+    accuracy: 80,
+    type: "WATER",
+  },
+  HYPERFANG: {
+    name: "HYPER FANG",
+    power: 80,
+    accuracy: 90,
+    type: "NORMAL",
+    effect: {
+      chance: 10,
+      volatileStatus: "flinch",
+    },
+  },
+  HYPNOSIS: {
+    name: "HYPNOSIS",
+    power: 0,
+    accuracy: 60,
+    type: "PSYCHIC",
+    effect: {
+      chance: 100,
+      status: "sleep",
+    },
+  },
+  HYPERBEAM: {
+    name: "HYPER BEAM",
+    power: 150,
+    accuracy: 90,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      // TO DO (selfVolatileStatus : recharge)?
+    },
+  },
   TACKLE: {
     name: "TACKLE",
     power: 35,
