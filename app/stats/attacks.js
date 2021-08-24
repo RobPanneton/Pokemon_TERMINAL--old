@@ -501,6 +501,51 @@ const attacks = {
       },
     },
   },
+  GLARE: {
+    name: "GLARE",
+    power: 0,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      status: "paralyze",
+    },
+  },
+  GROWL: {
+    name: "GROWL",
+    power: 0,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      enemyStatChange: {
+        attack: -1,
+      },
+    },
+  },
+  GROWTH: {
+    name: "GROWTH",
+    power: 0,
+    accuracy: 100,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      selfStatChange: {
+        special: 1,
+      },
+    },
+  },
+  GUILLOTINE: {
+    name: "GUILLOTINE",
+    // TODO
+  },
+  GUST: {
+    name: "GUST",
+    power: 40,
+    accuracy: 100,
+    type: "FLYING",
+  },
+
   TACKLE: {
     name: "TACKLE",
     power: 35,
