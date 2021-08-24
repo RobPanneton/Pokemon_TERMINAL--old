@@ -7,7 +7,6 @@
 // DISABLE
 // DOUBLE TEAM (?)
 // DREAM EATER
-// body slam not paralyzing normal types?
 
 // HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
 
@@ -29,6 +28,8 @@
 // RECOILING MOVES:
 // - SUBSITUTE: user does not take recoil damage if it destroys a sub
 // - COUNTER: sub recoil dmg is included in dmg calc if enemy did not move yet (?)
+
+// BODY SLAM: does not paralyze normal types in gen 1!? woah
 
 const attacks = {
   ABSORB: {
