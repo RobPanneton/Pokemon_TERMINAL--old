@@ -1,6 +1,6 @@
 // TODOS :                                    ~~~~~~~ MOVE CREATION TO DOS ~~~~~~~
 // BIDE
-// TRAPPERS : BIND, CLAMP,
+// TRAPPERS : BIND, CLAMP, FIRE SPIN
 // CONVERSION
 // COUNTER
 // DIG
@@ -8,6 +8,10 @@
 // DOUBLE TEAM (?)
 // DREAM EATER
 // EXPLOSION
+// 1HKO MOVES: FISSURE, HORN DRILL, GUILLOTINE
+// ACCURACY MOVES? FLASH, SAND-ATTACK, MINIMIZE, DOUBLE TEAM
+// FLY
+// FOCUS ENERGY ??? bugged in gen 1.. do i even add it ?
 
 // HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
 
@@ -390,16 +394,6 @@ const attacks = {
     accuracy: 100,
     type: "GROUND",
   },
-  FLAMETHROWER: {
-    name: "FLAMETHROWER",
-    power: 95,
-    accuracy: 100,
-    type: "FIRE",
-    effect: {
-      chance: 10,
-      status: "BURN",
-    },
-  },
   EGGBOMB: {
     name: "EGG BOMB",
     power: 100,
@@ -422,7 +416,91 @@ const attacks = {
     // however 340 might not be accurate if the enemy's def was already reduced 1 stage as
     // the def isn't halved anymore
   },
-
+  FIREBLAST: {
+    name: "FIRE BLAST",
+    power: 120,
+    accuracy: 85,
+    type: "FIRE",
+    effect: {
+      chance: 30,
+      status: "burn",
+    },
+  },
+  FIREPUNCH: {
+    name: "FIRE PUNCH",
+    power: 75,
+    accuracy: 100,
+    type: "FIRE",
+    effect: {
+      chance: 10,
+      status: "burn",
+    },
+  },
+  FIRESPIN: {
+    name: "FIRE SPIN",
+    // TODO
+  },
+  FISSURE: {
+    name: "FISSURE",
+    power: 0,
+    accuracy: 30,
+    type: "GROUND",
+    //TO DO
+  },
+  FLAMETHROWER: {
+    name: "FLAMETHROWER",
+    power: 95,
+    accuracy: 100,
+    type: "FIRE",
+    effect: {
+      chance: 10,
+      status: "burn",
+    },
+  },
+  FLASH: {
+    name: "FLASH",
+    // TO DO.. to add or not to add
+  },
+  FLY: {
+    name: "FLY",
+    // TODO
+  },
+  FOCUSENERGY: {
+    name: "FOCUS ENERGY",
+    // TO DO?
+  },
+  FURYATTACK: {
+    name: "FURY ATTACK",
+    power: 15,
+    accuracy: 85,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      multihit: {
+        2: 37.5,
+        3: 75,
+        4: 87.5,
+        5: 100,
+        // use rng and whatever is highest and <= is the result
+      },
+    },
+  },
+  FURYSWIPES: {
+    name: "FURY SWIPES",
+    power: 18,
+    accuracy: 80,
+    type: "NORMAL",
+    effect: {
+      chance: 100,
+      multihit: {
+        2: 37.5,
+        3: 75,
+        4: 87.5,
+        5: 100,
+        // use rng and whatever is highest and <= is the result
+      },
+    },
+  },
   TACKLE: {
     name: "TACKLE",
     power: 35,
