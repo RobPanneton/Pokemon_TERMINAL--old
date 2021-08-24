@@ -9,19 +9,19 @@
 // DREAM EATER
 // EXPLOSION
 // 1HKO MOVES: FISSURE, HORN DRILL, GUILLOTINE
-// ACCURACY MOVES? FLASH, SAND-ATTACK, MINIMIZE, DOUBLE TEAM
+// ACCURACY MOVES? FLASH, SAND-ATTACK, MINIMIZE, DOUBLE TEAM, KINESIS
 // FLY
 // FOCUS ENERGY ??? bugged in gen 1.. do i even add it ?
 // HAZE
-// HI JUMP KICK
+// HI JUMP KICK and JUMP KICK
 // HYPER BEAM
 
-// HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
+// HIGH CRIT RATIO MOVES: CRABHAMMER, KARATE CHOP, SLASH
 
 // TO BE TESTED:                              ~~~~~~~ TEST TO DOS ~~~~~~~
 
 // FLINCH : BITE,
-// DRAIN: ABSORB,
+// DRAIN: ABSORB, MEGA DRAIN, GIGA DRAIN, LEECH LIFE
 // STATMODS: ACID, AURORA BEAM
 // MULTI HIT: BARRAGE
 // RECOIL DAMAGE: DOUBLE-EDGE
@@ -626,6 +626,46 @@ const attacks = {
       // TO DO (selfVolatileStatus : recharge)?
     },
   },
+  ICEBEAM: {
+    name: "ICE BEAM",
+    power: 95,
+    accuracy: 100,
+    type: "ICE",
+    effect: {
+      chance: 10,
+      status: "freeze",
+    },
+  },
+  ICEPUNCH: {
+    name: "ICE PUNCH",
+    power: 75,
+    accuracy: 100,
+    type: "ICE",
+    effect: {
+      chance: 10,
+      status: "freeze",
+    },
+  },
+  JUMPKICK: {
+    // TO DO
+  },
+  KARATECHOP: {
+    // TO DO
+  },
+  KINESIS: {
+    // TO DO
+  },
+  LEECHLIFE: {
+    name: "LEECH LIFE",
+    power: 20,
+    accuracy: 100,
+    type: "BUG",
+    effect: {
+      chance: 100,
+      drain: 50,
+    },
+  },
+
   TACKLE: {
     name: "TACKLE",
     power: 35,
