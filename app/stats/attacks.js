@@ -7,6 +7,7 @@
 // DISABLE
 // DOUBLE TEAM (?)
 // DREAM EATER
+// EXPLOSION
 
 // HIGH CRIT RATIO MOVES: CRABHAMMER, SLASH
 
@@ -383,18 +384,52 @@ const attacks = {
     accuracy: 100,
     type: "FLYING",
   },
-  TACKLE: {
-    name: "TACKLE",
-    power: 35,
-    accuracy: 95,
-    type: "NORMAL",
-  },
   EARTHQUAKE: {
     name: "EARTHQUAKE",
     power: 100,
     accuracy: 100,
     type: "GROUND",
   },
+  FLAMETHROWER: {
+    name: "FLAMETHROWER",
+    power: 95,
+    accuracy: 100,
+    type: "FIRE",
+    effect: {
+      chance: 10,
+      status: "BURN",
+    },
+  },
+  EGGBOMB: {
+    name: "EGG BOMB",
+    power: 100,
+    accuracy: 75,
+    type: "NORMAL",
+  },
+  EMBER: {
+    name: "EMBER",
+    power: 40,
+    accuracy: 100,
+    type: "FIRE",
+  },
+  EXPLOSION: {
+    name: "EXPLOSION",
+    // TO DO
+    // this is a tricky one
+    // explosion does not faint user if a substitute is out -- **ONLY IN STADIUM 1 DOES IT FAINT... STILL GEN 1**
+    // explosion damage calc takes enemy def down 1 stage during damage calc
+    // you can either re-work around this, or make base power 340 instead of 170..
+    // however 340 might not be accurate if the enemy's def was already reduced 1 stage as
+    // the def isn't halved anymore
+  },
+
+  TACKLE: {
+    name: "TACKLE",
+    power: 35,
+    accuracy: 95,
+    type: "NORMAL",
+  },
+
   STOMP: {
     name: "STOMP",
     power: 65,
@@ -406,16 +441,6 @@ const attacks = {
     },
   },
 
-  FLAMETHROWER: {
-    name: "FLAMETHROWER",
-    power: 95,
-    accuracy: 100,
-    type: "FIRE",
-    effect: {
-      chance: 10,
-      status: "BURN",
-    },
-  },
   SURF: {
     name: "SURF",
     power: 95,
