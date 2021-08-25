@@ -887,6 +887,202 @@ const POKEMON = {
     attacks: [],
   },
 
+  TANGELA: {
+    id: 114,
+    species: "TANGELA",
+    type: { type1: "GRASS", type2: null },
+    stats: {
+      hp: 333,
+      attack: 208,
+      defense: 328,
+      special: 298,
+      speed: 218,
+    },
+    attacks: [],
+  },
+
+  KANGASKHAN: {
+    id: 115,
+    species: "KANGASKHAN",
+    type: { type1: "NORMAL", type2: null },
+    stats: {
+      hp: 413,
+      attack: 288,
+      defense: 258,
+      special: 178,
+      speed: 278,
+    },
+    attacks: [],
+  },
+
+  SEADRA: {
+    id: 117,
+    species: "SEADRA",
+    type: { type1: "WATER", type2: null },
+    stats: {
+      hp: 313,
+      attack: 228,
+      defense: 288,
+      special: 288,
+      speed: 268,
+    },
+    attacks: [],
+  },
+
+  SEAKING: {
+    id: 119,
+    species: "SEAKING",
+    type: { type1: "WATER", type2: null },
+    stats: {
+      hp: 363,
+      attack: 282,
+      defense: 228,
+      special: 258,
+      speed: 234,
+    },
+    attacks: [],
+  },
+
+  STARMIE: {
+    id: 121,
+    species: "STARMIE",
+    type: { type1: "WATER", type2: "PSYCHIC" },
+    stats: {
+      hp: 323,
+      attack: 248,
+      defense: 268,
+      special: 298,
+      speed: 328,
+    },
+    attacks: [],
+  },
+
+  MRMIME: {
+    id: 122,
+    species: `MR.MIME`,
+    type: { type1: "PSYCHIC", type2: null },
+    stats: {
+      hp: 283,
+      attack: 188,
+      defense: 228,
+      special: 298,
+      speed: 278,
+    },
+    attacks: [],
+  },
+
+  SCYTHER: {
+    id: 123,
+    species: "SCYTHER",
+    type: { type1: "BUG", type2: "FLYING" },
+    stats: {
+      hp: 343,
+      attack: 318,
+      defense: 258,
+      special: 208,
+      speed: 308,
+    },
+    attacks: [],
+  },
+
+  JYNX: {
+    id: 124,
+    species: "JYNX",
+    type: { type1: "ICE", type2: "PSYCHIC" },
+    stats: {
+      hp: 333,
+      attack: 198,
+      defense: 168,
+      special: 288,
+      speed: 288,
+    },
+    attacks: [],
+  },
+
+  ELECTABUZZ: {
+    id: 125,
+    species: "ELECTABUZZ",
+    type: { type1: "ELECTRIC", type2: null },
+    stats: {
+      hp: 333,
+      attack: 264,
+      defense: 212,
+      special: 268,
+      speed: 308,
+    },
+    attacks: [],
+  },
+
+  MAGMAR: {
+    id: 126,
+    species: "MAGMAR",
+    type: { type1: "FIRE", type2: null },
+    stats: {
+      hp: 333,
+      attack: 288,
+      defense: 212,
+      special: 268,
+      speed: 284,
+    },
+    attacks: [],
+  },
+
+  PINSIR: {
+    id: 127,
+    species: "PINSIR",
+    type: { type1: "BUG", type2: null },
+    stats: {
+      hp: 333,
+      attack: 348,
+      defense: 298,
+      special: 208,
+      speed: 268,
+    },
+    attacks: [],
+  },
+
+  TAUROS: {
+    id: 128,
+    species: 1,
+    type: { type1: "NORMAL", type2: null },
+    stats: {
+      hp: 353,
+      attack: 298,
+      defense: 288,
+      special: 238,
+      speed: 318,
+    },
+    attacks: [],
+  },
+
+  GYARADOS: {
+    id: 130,
+    species: "GYARADOS",
+    type: { type1: "WATER", type2: "FLYING" },
+    stats: {
+      hp: 393,
+      attack: 348,
+      defense: 256,
+      special: 298,
+      speed: 260,
+    },
+    attacks: [],
+  },
+
+  LAPRAS: {
+    id: 131,
+    species: "LAPRAS",
+    type: { type1: "WATER", type2: "ICE" },
+    stats: {
+      hp: 463,
+      attack: 268,
+      defense: 258,
+      special: 288,
+      speed: 218,
+    },
+    attacks: [],
+  },
+
   NAME: {
     id: 1,
     species: 1,
