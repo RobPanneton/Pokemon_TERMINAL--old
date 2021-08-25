@@ -370,6 +370,46 @@ const POKEMON = {
       "STRENGTH",
     ],
   },
+  CLEFABLE: {
+    id: 36,
+    species: "CLEFABLE",
+    type: { type1: "NORMAL", type2: null },
+    stats: {
+      hp: 393,
+      attack: 238,
+      defense: 244,
+      special: 268,
+      speed: 218,
+    },
+    attacks: [],
+  },
+  NINETALES: {
+    id: 38,
+    species: "NINETALES",
+    type: { type1: "FIRE", type2: null },
+    stats: {
+      hp: 1,
+      attack: 1,
+      defense: 1,
+      special: 1,
+      speed: 1,
+    },
+    attacks: [],
+  },
+  NAME: {
+    id: 1,
+    species: 1,
+    type: { type1: 1, type2: null },
+    stats: {
+      hp: 1,
+      attack: 1,
+      defense: 1,
+      special: 1,
+      speed: 1,
+    },
+    attacks: [],
+  },
+
   TAUROS: {
     id: 128,
     species: "TAUROS",
