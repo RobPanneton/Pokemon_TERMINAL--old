@@ -1043,7 +1043,7 @@ const POKEMON = {
 
   TAUROS: {
     id: 128,
-    species: 1,
+    species: "TAUROS",
     type: { type1: "NORMAL", type2: null },
     stats: {
       hp: 353,
@@ -1052,7 +1052,15 @@ const POKEMON = {
       special: 238,
       speed: 318,
     },
-    attacks: [],
+    attacks: [
+      "TACKLE",
+      "TAIL WHIP",
+      "STOMP",
+      "LEER",
+      "RAGE",
+      "TAKE DOWN",
+      "STRENGTH",
+    ],
   },
 
   GYARADOS: {
@@ -1083,41 +1091,243 @@ const POKEMON = {
     attacks: [],
   },
 
-  NAME: {
-    id: 1,
-    species: 1,
-    type: { type1: 1, type2: null },
+  DITTO: {
+    id: 132,
+    species: "DITTO",
+    type: { type1: "NORMAL", type2: null },
     stats: {
-      hp: 1,
-      attack: 1,
-      defense: 1,
-      special: 1,
-      speed: 1,
+      hp: 299,
+      attack: 194,
+      defense: 194,
+      special: 194,
+      speed: 194,
     },
     attacks: [],
   },
 
-  TAUROS: {
-    id: 128,
-    species: "TAUROS",
+  EEVEE: {
+    id: 133,
+    species: "EEVEE",
     type: { type1: "NORMAL", type2: null },
     stats: {
-      hp: 353,
-      attack: 298,
-      defense: 288,
-      special: 238,
-      speed: 318,
+      hp: 313,
+      attack: 208,
+      defense: 198,
+      special: 228,
+      speed: 208,
     },
-    attacks: [
-      "TACKLE",
-      "TAIL WHIP",
-      "STOMP",
-      "LEER",
-      "RAGE",
-      "TAKE DOWN",
-      "STRENGTH",
-    ],
+    attacks: [],
+  },
+
+  VAPOREON: {
+    id: 134,
+    species: "VAPOREON",
+    type: { type1: "WATER", type2: null },
+    stats: {
+      hp: 463,
+      attack: 228,
+      defense: 218,
+      special: 318,
+      speed: 228,
+    },
+    attacks: [],
+  },
+
+  JOLTEON: {
+    id: 135,
+    species: "JOLTEON",
+    type: { type1: "ELECTRIC", type2: null },
+    stats: {
+      hp: 333,
+      attack: 228,
+      defense: 218,
+      special: 318,
+      speed: 358,
+    },
+    attacks: [],
+  },
+
+  FLAREON: {
+    id: 136,
+    species: "FLAREON",
+    type: { type1: "FIRE", type2: null },
+    stats: {
+      hp: 333,
+      attack: 358,
+      defense: 218,
+      special: 318,
+      speed: 228,
+    },
+    attacks: [],
+  },
+
+  PORYGON: {
+    id: 137,
+    species: "PORYGON",
+    type: { type1: "PORYGON", type2: null },
+    stats: {
+      hp: 333,
+      attack: 218,
+      defense: 238,
+      special: 248,
+      speed: 178,
+    },
+    attacks: [],
+  },
+
+  OMASTAR: {
+    id: 139,
+    species: "OMASTAR",
+    type: { type1: "ROCK", type2: "WATER" },
+    stats: {
+      hp: 343,
+      attack: 218,
+      defense: 348,
+      special: 328,
+      speed: 208,
+    },
+    attacks: [],
+  },
+
+  KABUTOPS: {
+    id: 140,
+    species: "KABUTOPS",
+    type: { type1: "ROCK", type2: "WATER" },
+    stats: {
+      hp: 323,
+      attack: 328,
+      defense: 308,
+      special: 238,
+      speed: 258,
+    },
+    attacks: [],
+  },
+
+  AERODACTYL: {
+    id: 142,
+    species: "AERODACTYL",
+    type: { type1: "ROCK", type2: "FLYING" },
+    stats: {
+      hp: 363,
+      attack: 308,
+      defense: 228,
+      special: 218,
+      speed: 358,
+    },
+    attacks: [],
+  },
+
+  SNORLAX: {
+    id: 143,
+    species: "SNORLAX",
+    type: { type1: "NORMAL", type2: null },
+    stats: {
+      hp: 523,
+      attack: 318,
+      defense: 228,
+      special: 228,
+      speed: 158,
+    },
+    attacks: [],
+  },
+
+  ARTICUNO: {
+    id: 144,
+    species: "ARTICUNO",
+    type: { type1: "ICE", type2: "FLYING" },
+    stats: {
+      hp: 383,
+      attack: 268,
+      defense: 298,
+      special: 348,
+      speed: 268,
+    },
+    attacks: [],
+  },
+
+  ZAPDOS: {
+    id: 145,
+    species: "ZAPDOS",
+    type: { type1: "ELECTRIC", type2: "FLYING" },
+    stats: {
+      hp: 383,
+      attack: 278,
+      defense: 268,
+      special: 348,
+      speed: 298,
+    },
+    attacks: [],
+  },
+
+  MOLTRES: {
+    id: 146,
+    species: "MOLTRES",
+    type: { type1: "FIRE", type2: "FLYING" },
+    stats: {
+      hp: 383,
+      attack: 298,
+      defense: 278,
+      special: 348,
+      speed: 278,
+    },
+    attacks: [],
+  },
+
+  DRAGONITE: {
+    id: 149,
+    species: "DRAGONITE",
+    type: { type1: "DRAGON", type2: "FLYING" },
+    stats: {
+      hp: 385,
+      attack: 366,
+      defense: 288,
+      special: 298,
+      speed: 258,
+    },
+    attacks: [],
+  },
+
+  MEWTWO: {
+    id: 150,
+    species: "MEWTWO",
+    type: { type1: "PSYCHIC", type2: null },
+    stats: {
+      hp: 415,
+      attack: 318,
+      defense: 278,
+      special: 406,
+      speed: 358,
+    },
+    attacks: [],
+  },
+
+  MEW: {
+    id: 151,
+    species: "MEW",
+    type: { type1: "PSYCHIC", type2: null },
+    stats: {
+      hp: 403,
+      attack: 298,
+      defense: 298,
+      special: 298,
+      speed: 298,
+    },
+    attacks: [],
   },
 };
+
+// NAME: {
+//   id: 1,
+//   species: 1,
+//   type: { type1: 1, type2: null },
+//   stats: {
+//     hp: 1,
+//     attack: 1,
+//     defense: 1,
+//     special: 1,
+//     speed: 1,
+//   },
+//   attacks: [],
+// },
 
 module.exports = { POKEMON };
