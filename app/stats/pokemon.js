@@ -388,6 +388,58 @@ const POKEMON = {
     species: "NINETALES",
     type: { type1: "FIRE", type2: null },
     stats: {
+      hp: 349,
+      attack: 250,
+      defense: 248,
+      special: 298,
+      speed: 298,
+    },
+    attacks: [],
+  },
+  WIGGLYTUFF: {
+    id: 40,
+    species: "WIGGLYTUFF",
+    type: { type1: "NORMAL", type2: null },
+    stats: {
+      hp: 483,
+      attack: 238,
+      defense: 188,
+      special: 198,
+      speed: 188,
+    },
+    attacks: [],
+  },
+  GOLBAT: {
+    id: 42,
+    species: "GOLBAT",
+    type: { type1: "POISON", type2: "FLYING" },
+    stats: {
+      hp: 353,
+      attack: 258,
+      defense: 238,
+      special: 248,
+      speed: 278,
+    },
+    attacks: [],
+  },
+  VILEPLUME: {
+    id: 45,
+    species: "VILEPLUME",
+    type: { type1: "GRASS", type2: "POISON" },
+    stats: {
+      hp: 353,
+      attack: 258,
+      defense: 268,
+      special: 298,
+      speed: 198,
+    },
+    attacks: [],
+  },
+  NAME: {
+    id: 1,
+    species: 1,
+    type: { type1: 1, type2: null },
+    stats: {
       hp: 1,
       attack: 1,
       defense: 1,
@@ -396,6 +448,7 @@ const POKEMON = {
     },
     attacks: [],
   },
+
   NAME: {
     id: 1,
     species: 1,
