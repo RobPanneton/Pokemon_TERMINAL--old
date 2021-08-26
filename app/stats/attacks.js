@@ -665,14 +665,6 @@ const attacks = {
       drain: 50,
     },
   },
-
-  TACKLE: {
-    name: "TACKLE",
-    power: 35,
-    accuracy: 95,
-    type: "NORMAL",
-  },
-
   STOMP: {
     name: "STOMP",
     power: 65,
@@ -696,11 +688,11 @@ const attacks = {
     accuracy: 100,
     type: "NORMAL",
   },
-  VINEWHIP: {
-    name: "VINE WHIP",
+  TACKLE: {
+    name: "TACKLE",
     power: 35,
-    accuracy: 100,
-    type: "GRASS",
+    accuracy: 95,
+    type: "NORMAL",
   },
   THUNDERBOLT: {
     name: "THUNDERBOLT",
@@ -710,6 +702,12 @@ const attacks = {
     effect: {
       chance: 10,
       effect: "PARALYZE",
+    },
+    VINEWHIP: {
+      name: "VINE WHIP",
+      power: 35,
+      accuracy: 100,
+      type: "GRASS",
     },
   },
 };
