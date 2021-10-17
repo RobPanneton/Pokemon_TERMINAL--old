@@ -1,4 +1,4 @@
-# Terminal_Pokemon (WIP)
+# Pokemon TERMINAL (WIP)
 
 <img src ="./assets/titlescreen.png" style="width:600px">
 
