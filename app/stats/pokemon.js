@@ -1,6 +1,6 @@
 const POKEMON = {
   VENUSAUR: {
-    id: 3,
+    id: "003",
     species: "VENUSAUR",
     type: { type1: "GRASS", type2: "POISON" },
     stats: {
@@ -13,7 +13,7 @@ const POKEMON = {
     attacks: ["TACKLE", "GROWL", "LEECH SEED", "VINE WHIP"],
   },
   CHARIZARD: {
-    id: 6,
+    id: "006",
     species: "CHARIZARD",
     type: { type1: "FIRE", type2: "FLYING" },
     stats: {
@@ -35,7 +35,7 @@ const POKEMON = {
     ],
   },
   BLASTOISE: {
-    id: 9,
+    id: "009",
     species: "BLASTOISE",
     type: { type1: "WATER", type2: null },
     stats: {
@@ -59,7 +59,7 @@ const POKEMON = {
     ],
   },
   BUTTERFREE: {
-    id: 12,
+    id: "012",
     species: "BUTTERFREE",
     type: { type1: "BUG", type2: "FLYING" },
     stats: {
@@ -83,7 +83,7 @@ const POKEMON = {
     ],
   },
   BEEDRILL: {
-    id: 15,
+    id: "015",
     species: "BEEDRILL",
     type: { type1: "BUG", type2: "POISON" },
     stats: {
@@ -118,7 +118,7 @@ const POKEMON = {
     ],
   },
   PIDGEOT: {
-    id: 18,
+    id: "018",
     species: "PIDGEOT",
     type: { type1: "NORMAL", type2: "FLYING" },
     stats: {
@@ -140,7 +140,7 @@ const POKEMON = {
   },
 
   RATICATE: {
-    id: 20,
+    id: "020",
     species: "RATICATE",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -159,7 +159,7 @@ const POKEMON = {
     ],
   },
   FEAROW: {
-    id: 22,
+    id: "022",
     species: "FEAROW",
     type: { type1: "NORMAL", type2: "FLYING" },
     stats: {
@@ -180,7 +180,7 @@ const POKEMON = {
     ],
   },
   ARBOK: {
-    id: 22,
+    id: "022",
     species: "ARBOK",
     type: { type1: "POISON", type2: null },
     stats: {
@@ -201,7 +201,7 @@ const POKEMON = {
     ],
   },
   PIKACHU: {
-    id: 25,
+    id: "025",
     species: "PIKACHU",
     type: { type1: "ELECTRIC", type2: null },
     stats: {
@@ -222,7 +222,7 @@ const POKEMON = {
     ],
   },
   RAICHU: {
-    id: 26,
+    id: "026",
     species: "RAICHU",
     type: { type1: "ELECTRIC", type2: null },
     stats: {
@@ -243,7 +243,7 @@ const POKEMON = {
     ],
   },
   SANDSLASH: {
-    id: 28,
+    id: "028",
     species: "SANDSLASH",
     type: { type1: "GROUND", type2: null },
     stats: {
@@ -264,7 +264,7 @@ const POKEMON = {
     ],
   },
   NIDOQUEEN: {
-    id: 31,
+    id: "031",
     species: "NIDOQUEEN",
     type: { type1: "POISON", type2: "GROUND" },
     stats: {
@@ -317,7 +317,7 @@ const POKEMON = {
     ],
   },
   NIDOKING: {
-    id: 34,
+    id: "034",
     species: "NIDOKING",
     type: { type1: "POISON", type2: "GROUND" },
     stats: {
@@ -371,7 +371,7 @@ const POKEMON = {
     ],
   },
   CLEFABLE: {
-    id: 36,
+    id: "036",
     species: "CLEFABLE",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -384,7 +384,7 @@ const POKEMON = {
     attacks: [],
   },
   NINETALES: {
-    id: 38,
+    id: "038",
     species: "NINETALES",
     type: { type1: "FIRE", type2: null },
     stats: {
@@ -397,7 +397,7 @@ const POKEMON = {
     attacks: [],
   },
   WIGGLYTUFF: {
-    id: 40,
+    id: "040",
     species: "WIGGLYTUFF",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -410,7 +410,7 @@ const POKEMON = {
     attacks: [],
   },
   GOLBAT: {
-    id: 42,
+    id: "042",
     species: "GOLBAT",
     type: { type1: "POISON", type2: "FLYING" },
     stats: {
@@ -423,7 +423,7 @@ const POKEMON = {
     attacks: [],
   },
   VILEPLUME: {
-    id: 45,
+    id: "045",
     species: "VILEPLUME",
     type: { type1: "GRASS", type2: "POISON" },
     stats: {
@@ -436,7 +436,7 @@ const POKEMON = {
     attacks: [],
   },
   PARASECT: {
-    id: 47,
+    id: "047",
     species: "PARASECT",
     type: { type1: "BUG", type2: "GRASS" },
     stats: {
@@ -449,7 +449,7 @@ const POKEMON = {
     attacks: [],
   },
   VENOMOTH: {
-    id: 49,
+    id: "049",
     species: "VENOMOTH",
     type: { type1: "BUG", type2: "POISON" },
     stats: {
@@ -462,7 +462,7 @@ const POKEMON = {
     attacks: [],
   },
   DUGTRIO: {
-    id: 51,
+    id: "051",
     species: "DUGTRIO",
     type: { type1: "GROUND", type2: null },
     stats: {
@@ -475,7 +475,7 @@ const POKEMON = {
     attacks: [],
   },
   PERSIAN: {
-    id: 53,
+    id: "053",
     species: "PERSIAN",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -488,7 +488,7 @@ const POKEMON = {
     attacks: [],
   },
   GOLDUCK: {
-    id: 55,
+    id: "055",
     species: "GOLDUCK",
     type: { type1: "WATER", type2: null },
     stats: {
@@ -501,7 +501,7 @@ const POKEMON = {
     attacks: [],
   },
   PRIMEAPE: {
-    id: 57,
+    id: "057",
     species: "PRIMEAPE",
     type: { type1: "FIGHTING", type2: null },
     stats: {
@@ -514,7 +514,7 @@ const POKEMON = {
     attacks: [],
   },
   ARCANINE: {
-    id: 59,
+    id: "059",
     species: "ARCANINE",
     type: { type1: "FIRE", type2: null },
     stats: {
@@ -527,7 +527,7 @@ const POKEMON = {
     attacks: [],
   },
   POLIWRATH: {
-    id: 62,
+    id: "062",
     species: "POLIWRATH",
     type: { type1: "WATER", type2: "FIGHTING" },
     stats: {
@@ -540,7 +540,7 @@ const POKEMON = {
     attacks: [],
   },
   ALAKAZAM: {
-    id: 65,
+    id: "065",
     species: "ALAKAZAM",
     type: { type1: "PSYCHIC", type2: null },
     stats: {
@@ -553,7 +553,7 @@ const POKEMON = {
     attacks: [],
   },
   MACHAMP: {
-    id: 68,
+    id: "068",
     species: "MACHAMP",
     type: { type1: "FIGHTING", type2: null },
     stats: {
@@ -566,7 +566,7 @@ const POKEMON = {
     attacks: [],
   },
   VICTREEBEL: {
-    id: 71,
+    id: "071",
     species: "VICTREEBEL",
     type: { type1: "GRASS", type2: "POISON" },
     stats: {
@@ -579,7 +579,7 @@ const POKEMON = {
     attacks: [],
   },
   TENTACRUEL: {
-    id: 73,
+    id: "073",
     species: "TENTACRUEL",
     type: { type1: "WATER", type2: "POISON" },
     stats: {
@@ -593,7 +593,7 @@ const POKEMON = {
   },
 
   GOLEM: {
-    id: 76,
+    id: "076",
     species: "GOLEM",
     type: { type1: "ROCK", type2: "GROUND" },
     stats: {
@@ -606,7 +606,7 @@ const POKEMON = {
     attacks: [],
   },
   RAPIDASH: {
-    id: 78,
+    id: "078",
     species: "RAPIDASH",
     type: { type1: "FIRE", type2: null },
     stats: {
@@ -620,7 +620,7 @@ const POKEMON = {
   },
 
   SLOWBRO: {
-    id: 80,
+    id: "080",
     species: "SLOWBRO",
     type: { type1: "WATER", type2: "PSYCHIC" },
     stats: {
@@ -633,7 +633,7 @@ const POKEMON = {
     attacks: [],
   },
   MAGNETON: {
-    id: 82,
+    id: "082",
     species: "MAGNETON",
     type: { type1: "ELECTRIC", type2: null },
     stats: {
@@ -646,7 +646,7 @@ const POKEMON = {
     attacks: [],
   },
   FARFETCHD: {
-    id: 83,
+    id: "083",
     species: `FARFETCH'D`,
     type: { type1: "NORMAL", type2: "FLYING" },
     stats: {
@@ -659,7 +659,7 @@ const POKEMON = {
     attacks: [],
   },
   DODRIO: {
-    id: 85,
+    id: "085",
     species: "DODRIO",
     type: { type1: "NORMAL", type2: "FLYING" },
     stats: {
@@ -673,7 +673,7 @@ const POKEMON = {
   },
 
   DEWGONG: {
-    id: 87,
+    id: "087",
     species: "DEWGONG",
     type: { type1: "WATER", type2: "ICE" },
     stats: {
@@ -686,7 +686,7 @@ const POKEMON = {
     attacks: [],
   },
   MUK: {
-    id: 89,
+    id: "089",
     species: "MUK",
     type: { type1: "POISON", type2: null },
     stats: {
@@ -699,7 +699,7 @@ const POKEMON = {
     attacks: [],
   },
   CLOYSTER: {
-    id: 91,
+    id: "091",
     species: "CLOYSTER",
     type: { type1: "WATER", type2: "ICE" },
     stats: {
@@ -713,7 +713,7 @@ const POKEMON = {
   },
 
   GENGAR: {
-    id: 94,
+    id: "094",
     species: "GENGAR",
     type: { type1: "POISON", type2: "GHOST" },
     stats: {
@@ -726,7 +726,7 @@ const POKEMON = {
     attacks: [],
   },
   ONIX: {
-    id: 95,
+    id: "095",
     species: "ONIX",
     type: { type1: "ROCK", type2: "GROUND" },
     stats: {
@@ -739,7 +739,7 @@ const POKEMON = {
     attacks: [],
   },
   HYPNO: {
-    id: 97,
+    id: "097",
     species: "HYPNO",
     type: { type1: "PSYCHIC", type2: null },
     stats: {
@@ -752,7 +752,7 @@ const POKEMON = {
     attacks: [],
   },
   KINGLER: {
-    id: 99,
+    id: "099",
     species: "KINGLER",
     type: { type1: "WATER", type2: null },
     stats: {
@@ -765,7 +765,7 @@ const POKEMON = {
     attacks: [],
   },
   ELECTRODE: {
-    id: 101,
+    id: "101",
     species: "ELECTRODE",
     type: { type1: "ELECTRIC", type2: null },
     stats: {
@@ -779,7 +779,7 @@ const POKEMON = {
   },
 
   EXEGGUTOR: {
-    id: 103,
+    id: "103",
     species: "EXEGGUTOR",
     type: { type1: "GRASS", type2: "PSYCHIC" },
     stats: {
@@ -793,7 +793,7 @@ const POKEMON = {
   },
 
   MAROWAK: {
-    id: 105,
+    id: "105",
     species: "MAROWAK",
     type: { type1: "GROUND", type2: null },
     stats: {
@@ -807,7 +807,7 @@ const POKEMON = {
   },
 
   HITMONLEE: {
-    id: 106,
+    id: "106",
     species: "HITMONLEE",
     type: { type1: "FIGHTING", type2: null },
     stats: {
@@ -820,7 +820,7 @@ const POKEMON = {
     attacks: [],
   },
   HITMONCHAN: {
-    id: 107,
+    id: "107",
     species: "HITMONCHAN",
     type: { type1: "FIGHTING", type2: null },
     stats: {
@@ -834,7 +834,7 @@ const POKEMON = {
   },
 
   LICKITUNG: {
-    id: 108,
+    id: "108",
     species: "LICKITUNG",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -847,7 +847,7 @@ const POKEMON = {
     attacks: [],
   },
   WEEZING: {
-    id: 110,
+    id: "110",
     species: "WEEZING",
     type: { type1: "POISON", type2: null },
     stats: {
@@ -860,7 +860,7 @@ const POKEMON = {
     attacks: [],
   },
   RHYDON: {
-    id: 112,
+    id: "112",
     species: "RHYDON",
     type: { type1: "GROUND", type2: "ROCK" },
     stats: {
@@ -874,7 +874,7 @@ const POKEMON = {
   },
 
   CHANSEY: {
-    id: 113,
+    id: "113",
     species: "CHANSEY",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -888,7 +888,7 @@ const POKEMON = {
   },
 
   TANGELA: {
-    id: 114,
+    id: "114",
     species: "TANGELA",
     type: { type1: "GRASS", type2: null },
     stats: {
@@ -902,7 +902,7 @@ const POKEMON = {
   },
 
   KANGASKHAN: {
-    id: 115,
+    id: "115",
     species: "KANGASKHAN",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -916,7 +916,7 @@ const POKEMON = {
   },
 
   SEADRA: {
-    id: 117,
+    id: "117",
     species: "SEADRA",
     type: { type1: "WATER", type2: null },
     stats: {
@@ -930,7 +930,7 @@ const POKEMON = {
   },
 
   SEAKING: {
-    id: 119,
+    id: "119",
     species: "SEAKING",
     type: { type1: "WATER", type2: null },
     stats: {
@@ -944,7 +944,7 @@ const POKEMON = {
   },
 
   STARMIE: {
-    id: 121,
+    id: "121",
     species: "STARMIE",
     type: { type1: "WATER", type2: "PSYCHIC" },
     stats: {
@@ -958,7 +958,7 @@ const POKEMON = {
   },
 
   MRMIME: {
-    id: 122,
+    id: "122",
     species: `MR.MIME`,
     type: { type1: "PSYCHIC", type2: null },
     stats: {
@@ -972,7 +972,7 @@ const POKEMON = {
   },
 
   SCYTHER: {
-    id: 123,
+    id: "123",
     species: "SCYTHER",
     type: { type1: "BUG", type2: "FLYING" },
     stats: {
@@ -986,7 +986,7 @@ const POKEMON = {
   },
 
   JYNX: {
-    id: 124,
+    id: "124",
     species: "JYNX",
     type: { type1: "ICE", type2: "PSYCHIC" },
     stats: {
@@ -1000,7 +1000,7 @@ const POKEMON = {
   },
 
   ELECTABUZZ: {
-    id: 125,
+    id: "125",
     species: "ELECTABUZZ",
     type: { type1: "ELECTRIC", type2: null },
     stats: {
@@ -1014,7 +1014,7 @@ const POKEMON = {
   },
 
   MAGMAR: {
-    id: 126,
+    id: "126",
     species: "MAGMAR",
     type: { type1: "FIRE", type2: null },
     stats: {
@@ -1028,7 +1028,7 @@ const POKEMON = {
   },
 
   PINSIR: {
-    id: 127,
+    id: "127",
     species: "PINSIR",
     type: { type1: "BUG", type2: null },
     stats: {
@@ -1042,7 +1042,7 @@ const POKEMON = {
   },
 
   TAUROS: {
-    id: 128,
+    id: "128",
     species: "TAUROS",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -1064,7 +1064,7 @@ const POKEMON = {
   },
 
   GYARADOS: {
-    id: 130,
+    id: "130",
     species: "GYARADOS",
     type: { type1: "WATER", type2: "FLYING" },
     stats: {
@@ -1078,7 +1078,7 @@ const POKEMON = {
   },
 
   LAPRAS: {
-    id: 131,
+    id: "131",
     species: "LAPRAS",
     type: { type1: "WATER", type2: "ICE" },
     stats: {
@@ -1092,7 +1092,7 @@ const POKEMON = {
   },
 
   DITTO: {
-    id: 132,
+    id: "132",
     species: "DITTO",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -1106,7 +1106,7 @@ const POKEMON = {
   },
 
   EEVEE: {
-    id: 133,
+    id: "133",
     species: "EEVEE",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -1120,7 +1120,7 @@ const POKEMON = {
   },
 
   VAPOREON: {
-    id: 134,
+    id: "134",
     species: "VAPOREON",
     type: { type1: "WATER", type2: null },
     stats: {
@@ -1134,7 +1134,7 @@ const POKEMON = {
   },
 
   JOLTEON: {
-    id: 135,
+    id: "135",
     species: "JOLTEON",
     type: { type1: "ELECTRIC", type2: null },
     stats: {
@@ -1148,7 +1148,7 @@ const POKEMON = {
   },
 
   FLAREON: {
-    id: 136,
+    id: "136",
     species: "FLAREON",
     type: { type1: "FIRE", type2: null },
     stats: {
@@ -1162,7 +1162,7 @@ const POKEMON = {
   },
 
   PORYGON: {
-    id: 137,
+    id: "137",
     species: "PORYGON",
     type: { type1: "PORYGON", type2: null },
     stats: {
@@ -1176,7 +1176,7 @@ const POKEMON = {
   },
 
   OMASTAR: {
-    id: 139,
+    id: "139",
     species: "OMASTAR",
     type: { type1: "ROCK", type2: "WATER" },
     stats: {
@@ -1190,7 +1190,7 @@ const POKEMON = {
   },
 
   KABUTOPS: {
-    id: 140,
+    id: "140",
     species: "KABUTOPS",
     type: { type1: "ROCK", type2: "WATER" },
     stats: {
@@ -1204,7 +1204,7 @@ const POKEMON = {
   },
 
   AERODACTYL: {
-    id: 142,
+    id: "142",
     species: "AERODACTYL",
     type: { type1: "ROCK", type2: "FLYING" },
     stats: {
@@ -1218,7 +1218,7 @@ const POKEMON = {
   },
 
   SNORLAX: {
-    id: 143,
+    id: "143",
     species: "SNORLAX",
     type: { type1: "NORMAL", type2: null },
     stats: {
@@ -1232,7 +1232,7 @@ const POKEMON = {
   },
 
   ARTICUNO: {
-    id: 144,
+    id: "144",
     species: "ARTICUNO",
     type: { type1: "ICE", type2: "FLYING" },
     stats: {
@@ -1246,7 +1246,7 @@ const POKEMON = {
   },
 
   ZAPDOS: {
-    id: 145,
+    id: "145",
     species: "ZAPDOS",
     type: { type1: "ELECTRIC", type2: "FLYING" },
     stats: {
@@ -1260,7 +1260,7 @@ const POKEMON = {
   },
 
   MOLTRES: {
-    id: 146,
+    id: "146",
     species: "MOLTRES",
     type: { type1: "FIRE", type2: "FLYING" },
     stats: {
@@ -1274,7 +1274,7 @@ const POKEMON = {
   },
 
   DRAGONITE: {
-    id: 149,
+    id: "149",
     species: "DRAGONITE",
     type: { type1: "DRAGON", type2: "FLYING" },
     stats: {
@@ -1288,7 +1288,7 @@ const POKEMON = {
   },
 
   MEWTWO: {
-    id: 150,
+    id: "150",
     species: "MEWTWO",
     type: { type1: "PSYCHIC", type2: null },
     stats: {
@@ -1302,7 +1302,7 @@ const POKEMON = {
   },
 
   MEW: {
-    id: 151,
+    id: "151",
     species: "MEW",
     type: { type1: "PSYCHIC", type2: null },
     stats: {

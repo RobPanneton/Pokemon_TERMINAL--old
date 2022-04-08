@@ -18,6 +18,8 @@ const start = async () => {
 
 start();
 
-// response = prompt("Pokemon TERMINAL");
+
 
 // test
+// response = prompt("Pokemon TERMINAL");
+
