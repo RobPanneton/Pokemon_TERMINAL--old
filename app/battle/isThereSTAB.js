@@ -1,11 +1,8 @@
 const isThereSTAB = (pokemon, attack) => {
-  let result = false;
-
-  if (pokemon.type.type1 === attack.type) result = true;
-
-  if (pokemon.type.type2) if (pokemon.type.type2 === attack.type) result = true;
-
-  return result;
+  return pokemon.type.type1 === attack.type ||
+    pokemon.type.type2 === attack.type
+    ? true
+    : false;
 };
 
 module.exports = { isThereSTAB };
