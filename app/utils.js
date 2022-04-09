@@ -29,4 +29,13 @@ const timeDelay = async (delay) => {
   return await new Promise((resolve) => setTimeout(resolve, delay));
 };
 
-module.exports = { anyKeyPrompt, pascaleCase, timeDelay };
+const removeLeadingZeros = (stringNum) => {
+  if (stringNum.charAt(0) !== "0") return stringNum;
+
+  let cleanedNum = stringNum;
+  while (cleanedNum.charAt(0) === "0")
+    cleanedNum = cleanedNum.replace(/^0+/, "");
+  return cleanedNum;
+};
+
+module.exports = { anyKeyPrompt, pascaleCase, timeDelay, removeLeadingZeros };

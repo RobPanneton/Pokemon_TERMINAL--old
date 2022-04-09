@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-const { createTeamMain } = require("./createTeamMain");
+const { createTeamMain } = require("./createTeam/createTeamMain");
 const { editTeamMain } = require("./editTeamMain");
 
 // REFORMAT THIS
