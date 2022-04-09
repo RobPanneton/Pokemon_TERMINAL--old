@@ -1,5 +1,3 @@
-const attacks = require("../stats/attacks");
-
 const { attackPrompt } = require("./attackPrompt");
 const { timeDelay } = require("../utils");
 const { initiateTeam } = require("./initiateTeam");

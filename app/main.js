@@ -3,7 +3,7 @@ const { mainMenu } = require("./mainMenu");
 const { initiateBattle } = require("./battle/battle");
 const { teambuilderMainMenu } = require("./teambuilder/teambuilderMainMenu");
 
-const { timeDelay } = require("./utils");
+// const { timeDelay } = require("./utils");    FOR GAME PAUSES
 
 const start = async () => {
   await introScreen();
