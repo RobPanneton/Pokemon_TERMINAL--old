@@ -23,12 +23,16 @@ const createTeamMain = () => {
   console.log("CHOOSE A POKEMON !\n");
 
   console.log(`${pokemonListString.join("")}      9) Exit\n`);
-  let userInput = Number(prompt("Enter A Pokedex Number: "));
+  let userInput = prompt("Enter A Name Or Pokedex Number: ");
 
-  if (userInput == NaN) userInput.toUpperCase();
+  if (Number(userInput) == NaN) userInput = userInput.toUpperCase();
 
-  while (userInput == NaN || userInput < 1 || userInput > 151)
-    userInput = Number(prompt("Enter A Valid Pokedex Number: "));
+  console.log(userInput);
+
+  while (!validInputs.includes(userInput))
+    userInput = prompt("Enter A Name Or Pokedex Number: ");
+
+  console.log("good input");
 
   return;
 };
