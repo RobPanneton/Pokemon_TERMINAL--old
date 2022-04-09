@@ -16,7 +16,7 @@ const teambuilderMainMenu = () => {
   console.log(typeof teambuilderInput);
 
   // REFORMAT THIS
-  // while (/[1-3]/.test(teambuilderInput)) { DIDN'T WORK
+  // while (/[1-3]/.test(teambuilderInput)) { DIDN'T WORK AS INPUT BEING A STRING
   while (
     teambuilderInput / 1 !== teambuilderInput ||
     teambuilderInput < 1 ||
