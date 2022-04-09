@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
 const { getNewPokemonInput } = require("./getNewPokemonInput");
-const { removeLeadingZeros } = require("../../utils");
+const { removeLeadingZeros, addLeadingZeros } = require("../../utils");
 
 const { POKEMON } = require("../../stats/pokemon");
 
@@ -57,19 +57,27 @@ const createTeamMain = () => {
 
   // prompt user for input
   while (!newTeam.isFull()) {
+    console.log(newTeam.currentTeam);
     console.log("CHOOSE A POKEMON !\n");
 
     userInput = getNewPokemonInput(pokemonListString, validInputs);
     if (userInput === "9" || userInput === "8") break;
 
+    console.log(userInput);
     // find how to find the pokemon based on input
     selectedPokemon = Object.keys(POKEMON).find((poke, index) => {
-      if (Object.keys(POKEMON)[index].id === userInput) return poke;
-      if (Object.keys(POKEMON)[index].species === userInput) return poke;
-      if (Object.keys(POKEMON)[index].id === userInput) return poke;
+      if (POKEMON[poke].id === userInput) return poke;
+      if (POKEMON[poke].species === userInput) return poke;
+      if (POKEMON[poke].id === addLeadingZeros(userInput)) return poke;
     });
+    console.log(selectedPokemon);
 
-    console.log("good input");
+    newTeam.currentTeam = {
+      ...newTeam.currentTeam,
+      ["slot_" + newTeam.currentSlot]: selectedPokemon,
+    };
+
+    newTeam.currentSlot++;
   }
   if (userInput === "8") createTeamMain();
   if (userInput === "9") return;

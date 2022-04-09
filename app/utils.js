@@ -38,4 +38,14 @@ const removeLeadingZeros = (stringNum) => {
   return cleanedNum;
 };
 
-module.exports = { anyKeyPrompt, pascaleCase, timeDelay, removeLeadingZeros };
+const addLeadingZeros = (stringNum) => {
+  return stringNum.length < 3 ? addLeadingZeros(`0${stringNum}`) : stringNum;
+};
+
+module.exports = {
+  anyKeyPrompt,
+  pascaleCase,
+  timeDelay,
+  removeLeadingZeros,
+  addLeadingZeros,
+};
