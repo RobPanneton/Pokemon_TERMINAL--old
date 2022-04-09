@@ -1,11 +1,9 @@
 const prompt = require("prompt-sync")();
 
-const getNewPokemonInput = (pokemonListString, validInputs) => {
+const getNewSpeciesInput = (pokemonListString, validInputs) => {
   // render list of pokemon and exit options
   console.log(`${pokemonListString.join("")}   8) Start Over   9) Exit\n`);
   let userInput = prompt("Enter A Name Or Pokedex Number: ");
-
-  console.log(userInput);
 
   if (userInput === "9") return "9";
   if (userInput === "8") return "8";
@@ -19,5 +17,5 @@ const getNewPokemonInput = (pokemonListString, validInputs) => {
 };
 
 module.exports = {
-  getNewPokemonInput,
+  getNewSpeciesInput,
 };

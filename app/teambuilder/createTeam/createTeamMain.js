@@ -1,6 +1,7 @@
 const prompt = require("prompt-sync")();
 
-const { getNewPokemonInput } = require("./getNewPokemonInput");
+const { getNewSpeciesInput } = require("./getNewSpeciesInput");
+const { getNewAttacks } = require("./getNewAttacks");
 const { removeLeadingZeros, addLeadingZeros } = require("../../utils");
 
 const { POKEMON } = require("../../stats/pokemon");
@@ -34,9 +35,6 @@ const createTeamMain = () => {
     };
   }
 
-  // initiate team
-  let newTeam = new Team();
-
   // compile valid inputs
   const validInputs = Object.keys(POKEMON).reduce((acc, obj) => {
     if (POKEMON[obj].attacks.length === 0) return [...acc];
@@ -45,22 +43,25 @@ const createTeamMain = () => {
 
   // set list for display menu
   const pokemonListString = Object.keys(POKEMON).map((poke, index) => {
-    if ((index + 1) % 4 === 0) return `${POKEMON[poke].id}) ${poke}\n\n`;
-    return `${POKEMON[poke].id}) ${poke}   `;
+    if ((index + 1) % 4 === 0)
+      return `${POKEMON[poke].id}) ${POKEMON[poke].species}\n\n`;
+    return `${POKEMON[poke].id}) ${POKEMON[poke].species}   `;
   });
 
   console.log(
     "=================================================================\n=======================   CREATE A TEAM   =======================\n=================================================================\n"
   );
 
+  // initiate team
+  let newTeam = new Team();
+
   let userInput;
 
-  // prompt user for input
+  // prompt user for inputs
   while (!newTeam.isFull()) {
-    console.log(newTeam.currentTeam);
     console.log("CHOOSE A POKEMON !\n");
 
-    userInput = getNewPokemonInput(pokemonListString, validInputs);
+    userInput = getNewSpeciesInput(pokemonListString, validInputs);
     if (userInput === "9" || userInput === "8") break;
 
     console.log(userInput);
@@ -70,11 +71,12 @@ const createTeamMain = () => {
       if (POKEMON[poke].species === userInput) return poke;
       if (POKEMON[poke].id === addLeadingZeros(userInput)) return poke;
     });
-    console.log(selectedPokemon);
+
+    const selectedAttacks = getNewAttacks(POKEMON[selectedPokemon].attacks);
 
     newTeam.currentTeam = {
       ...newTeam.currentTeam,
-      ["slot_" + newTeam.currentSlot]: selectedPokemon,
+      ["slot_" + newTeam.currentSlot]: { selectedPokemon },
     };
 
     newTeam.currentSlot++;
