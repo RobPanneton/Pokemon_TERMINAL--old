@@ -703,12 +703,12 @@ const attacks = {
       chance: 10,
       effect: "PARALYZE",
     },
-    VINEWHIP: {
-      name: "VINE WHIP",
-      power: 35,
-      accuracy: 100,
-      type: "GRASS",
-    },
+  },
+  VINEWHIP: {
+    name: "VINE WHIP",
+    power: 35,
+    accuracy: 100,
+    type: "GRASS",
   },
 };
 
