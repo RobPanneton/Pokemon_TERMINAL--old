@@ -9,15 +9,15 @@ const getNewAttacks = (pokemonSpeciesAttacks) => {
 
     // prepare attack list
     let attackList = attackListTemp.map((attack, index) => {
-      if (index + (1 % 4) === 0 && index + 1 !== attackListTemp.length)
-        return `${index + 1}) ${attack}\n\n`;
+      if ((index + 1) % 4 === 0 && index + 1 !== attackListTemp.length)
+        return `${index + 1}) ${attack}\n`;
       return `${index + 1}) ${attack}  `;
     });
 
-    console.log("\nSelect an Attack: ");
+    console.log("\nSelect an Attack\n");
     console.log(`${attackList.join("")}`);
 
-    let attackSelectedInput = prompt("Choose an attack: ");
+    let attackSelectedInput = prompt("\nChoose an attack: ");
     while (attackSelectedInput > attackList.length)
       attackSelectedInput = prompr("Please enter a valid option: ");
 

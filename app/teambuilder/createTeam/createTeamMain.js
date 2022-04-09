@@ -6,8 +6,7 @@ const { removeLeadingZeros, addLeadingZeros } = require("../../utils");
 
 const { POKEMON } = require("../../stats/pokemon");
 
-//////////////////////////////////////////////////////////////////////////////////////////
-////////////////// YOU NEED SOME SCOPING ADJUSTMENTS, START NESTING YOUR FUNCTIONS TO FIT YOUR NESTING NEEDS
+// NEXT : GET THE DATA INTO THE TEAM AND SAVE IT LOCALLY
 
 const createTeamMain = () => {
   // create class to initiate team with
