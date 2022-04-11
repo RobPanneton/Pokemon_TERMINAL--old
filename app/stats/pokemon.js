@@ -180,7 +180,7 @@ const POKEMON = {
     ],
   },
   ARBOK: {
-    id: "022",
+    id: "024",
     species: "ARBOK",
     type: { type1: "POISON", type2: null },
     stats: {

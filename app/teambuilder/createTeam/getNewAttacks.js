@@ -19,9 +19,9 @@ const getNewAttacks = (pokemonSpeciesAttacks) => {
 
     let attackSelectedInput = prompt("\nChoose an attack: ");
     while (attackSelectedInput > attackList.length)
-      attackSelectedInput = prompr("Please enter a valid option: ");
+      attackSelectedInput = prompt("Please enter a valid option: ");
 
-    userSelectedAttacks.push(attackList[attackSelectedInput]);
+    userSelectedAttacks.push(attackListTemp[attackSelectedInput - 1]);
 
     attackListTemp.splice(Number(attackSelectedInput) - 1, 1);
   }

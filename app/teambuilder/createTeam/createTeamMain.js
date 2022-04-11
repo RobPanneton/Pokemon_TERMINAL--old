@@ -65,7 +65,7 @@ const createTeamMain = () => {
 
     console.log(userInput);
     // find how to find the pokemon based on input
-    selectedPokemon = Object.keys(POKEMON).find((poke, index) => {
+    selectedPokemon = Object.keys(POKEMON).find((poke) => {
       if (POKEMON[poke].id === userInput) return poke;
       if (POKEMON[poke].species === userInput) return poke;
       if (POKEMON[poke].id === addLeadingZeros(userInput)) return poke;
@@ -75,17 +75,23 @@ const createTeamMain = () => {
 
     newTeam.currentTeam = {
       ...newTeam.currentTeam,
-      ["slot_" + newTeam.currentSlot]: { selectedPokemon },
+      ["slot_" + newTeam.currentSlot]: {
+        id: selectedPokemon,
+        species: POKEMON[selectedPokemon].species,
+        type: POKEMON[selectedPokemon].type,
+        stats: POKEMON[selectedPokemon].stats,
+        attacks: selectedAttacks,
+      },
     };
 
     newTeam.currentSlot++;
+
+    console.log(newTeam.currentTeam);
   }
   if (userInput === "8") createTeamMain();
   if (userInput === "9") return;
 
   return;
 };
-
-// module.exports.createTeamMain = createTeamMain;
 
 module.exports = { createTeamMain };
