@@ -1,5 +1,5 @@
 const prompt = require("prompt-sync")();
-const { writeFile } = require("fs");
+const { writeFileSync } = require("fs");
 
 const { getNewSpeciesInput } = require("./getNewSpeciesInput");
 const { getNewAttacks } = require("./getNewAttacks");
@@ -18,11 +18,11 @@ const createTeamMain = () => {
 
       this.currentTeam = {
         slot_1: null,
-        slot_2: null,
-        slot_3: null,
-        slot_4: null,
-        slot_5: null,
-        slot_6: null,
+        // slot_2: null,
+        // slot_3: null,
+        // slot_4: null,
+        // slot_5: null,
+        // slot_6: null,
       };
 
       this.currentSlot = 1;
@@ -93,8 +93,8 @@ const createTeamMain = () => {
 
   console.log("Saving team...");
 
-  const newTeamData = JSON.parse(newTeam);
-  writeFile("../../teams/userTeams.json", newTeamData);
+  // writeFile("../../teams/userTeams.json", newTeamData);
+  writeFileSync("userTeams.json", JSON.stringify(newTeam));
 
   console.log("Save Complete !");
   return;
