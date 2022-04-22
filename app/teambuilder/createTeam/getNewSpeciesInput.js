@@ -8,6 +8,7 @@ const getNewSpeciesInput = (pokemonListString, validInputs) => {
   if (userInput === "9") return "9";
   if (userInput === "8") return "8";
 
+  // fix this, dosn't seem to work
   if (Number(userInput) == NaN) userInput = userInput.toUpperCase();
 
   while (!validInputs.includes(userInput))

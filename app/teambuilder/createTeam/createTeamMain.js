@@ -1,12 +1,11 @@
 const prompt = require("prompt-sync")();
+const { writeFile } = require("fs");
 
 const { getNewSpeciesInput } = require("./getNewSpeciesInput");
 const { getNewAttacks } = require("./getNewAttacks");
 const { removeLeadingZeros, addLeadingZeros } = require("../../utils");
 
 const { POKEMON } = require("../../stats/pokemon");
-
-// NEXT : GET THE DATA INTO THE TEAM AND SAVE IT LOCALLY
 
 const createTeamMain = () => {
   // create class to initiate team with
@@ -85,12 +84,17 @@ const createTeamMain = () => {
     };
 
     newTeam.currentSlot++;
-
-    console.log(newTeam.currentTeam);
   }
+
   if (userInput === "8") createTeamMain();
   if (userInput === "9") return;
 
+  console.log("Saving team...");
+
+  const newTeamData = JSON.parse(newTeam);
+  writeFile("../../teams/userTeams.json", newTeamData);
+
+  console.log("Save Complete !");
   return;
 };
 

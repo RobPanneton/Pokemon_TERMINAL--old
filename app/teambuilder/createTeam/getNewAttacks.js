@@ -1,10 +1,11 @@
 const prompt = require("prompt-sync")();
 
 const getNewAttacks = (pokemonSpeciesAttacks) => {
-  let attackListTemp = pokemonSpeciesAttacks;
+  let attackListTemp = [...pokemonSpeciesAttacks];
   let userSelectedAttacks = [];
 
   for (let i = 0; i < 4; i++) {
+    // if there are no moves left to select, conclude move selection
     if (attackListTemp.length === 0) break;
 
     // prepare attack list
