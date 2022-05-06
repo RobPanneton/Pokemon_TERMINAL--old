@@ -93,8 +93,7 @@ const createTeamMain = () => {
 
   console.log("Saving team...");
 
-  // writeFile("../../teams/userTeams.json", newTeamData);
-  writeFileSync("userTeams.json", JSON.stringify(newTeam));
+  writeFileSync("./teams/userTeams.json", JSON.stringify(newTeam));
 
   console.log("Save Complete !");
   return;
